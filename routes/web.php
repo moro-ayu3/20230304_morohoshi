@@ -18,7 +18,7 @@ return view('welcome');
 });
 
 
-Route::get('/{todo}/', function ($todos) {
+Route::get('/{todo}', function ($todos) {
 return '$todos';
 });
 
