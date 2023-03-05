@@ -4,11 +4,17 @@ use App\Http\Controllers\TodoController;
  Route::get('/todo',
   [TodoController::class, 'index' ]);
 
-  namespace App\Http\Controllers;
-  use Illuminate\Http\Request; class TestController extends Controller
-  { public function index()
-     { $todos= Todo::all();
 
-    return view('index', $todos);
+  <?php
+  namespace App\Http\Controllers;
+  use Illuminate\Http\Request;
+  use App\Models\Todo;
+
+  class TodoController extends Controller
+  {
+    public function index()
+     {
+        $todos= Todo::all();
+        return view('index',['todos'=>$todos]); 
   }
   }

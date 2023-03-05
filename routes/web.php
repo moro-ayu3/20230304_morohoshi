@@ -14,18 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+return view('welcome');
 });
 
 
 Route::get('/{todo}/', function ($todos) {
-  return '$todos';
+return '$todos';
 });
 
 
 
 
-use Illuminate\Support\Facades\Route;
+
+
 use App\Http\Controllers\TodoController;
 
-Route::get('', [TodoController::class, 'index']);
+Route::get('/', [TodoController::class, 'index']);
