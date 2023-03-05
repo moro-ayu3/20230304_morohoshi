@@ -32,7 +32,9 @@
   border: solid 1px #c0c0c0;
   margin-left: 30px;
   border-radius: 5px 5px 5px 5px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .create-btn {
@@ -42,17 +44,16 @@
   margin-right: 20px;
   border-radius: 10px 10px 10px 10px;
   border: solid 3px #9966CC;
-  display: inline-block;
-}
-
-.create-btn_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 15px;
   font-weight: bold;
   color: #9966CC;
-  margin:15px 20px;
+  padding:15px 20px;
 }
 
-.title {
+table {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,19 +90,13 @@
   color: black;
 }
 
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .date-2 {
   margin-left: 20px;
   font-size: 20px;
   color: black;
 }
 
-.task {
+.input-update {
   width: 200px;
   height: 20px;
   border: solid 1px #c0c0c0;
@@ -109,33 +104,27 @@
   margin-left: 10px;
 }
 
-.update-btn {
+.button-update {
   width: 80px;
   height: 40px;
   border-radius: 10px 10px 10px 10px;
   border: solid 3px #ffa500;
   margin-left: 10px;
-}
-
-.update-btn_text {
   font-size: 15px;
   font-weight: bold;
   color: #ffa500;
-  margin: 15px 20px;
+  padding: 15px 20px;
 }
 
-.delete-btn {
+.button-delete {
   width: 80px;
   height: 40px;
   border-radius: 10px 10px 10px 10px;
   border: solid 3px #40e0d0;
   margin-left: 10px;
   margin-right: 20px;
-}
-
-.delete-btn_text {
   font-size: 15px;
   font-weight: bold;
   color: #40e0d0;
-  margin: 15px 20px;
+  padding: 15px 20px;
 }
