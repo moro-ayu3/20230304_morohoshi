@@ -8,6 +8,8 @@
   <style>
     .homepage {
       width: 100%;
+      height: auto;
+      padding: 200px 150px;
       background-color: #191970;
     }
 
@@ -28,17 +30,15 @@
     }
 
     .form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
+      display: inline-block;
+      margin: -20px -15px;
     }
 
     .text {
       width: 500px;
       height: 30px;
       border: solid 1px #c0c0c0;
-      margin-left: 30px;
+      margin-left: 20px;
       border-radius: 5px 5px 5px 5px;
       display: inline-block;
     }
@@ -46,7 +46,7 @@
     .create-btn {
       width: 80px;
       height: 40px;
-      margin-left: 30px;
+      margin-left: 20px;
       margin-right: 20px;
       border-radius: 10px 10px 10px 10px;
       border: solid 3px #9966CC;
@@ -54,14 +54,14 @@
       font-size: 15px;
       font-weight: bold;
       color: #9966CC;
-      padding:15px 20px;
+      padding:10px 20px 10px 20px;
     }
 
     table {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 30px;
       margin-bottom: 40px;
     }
 
@@ -117,7 +117,7 @@
       font-size: 15px;
       font-weight: bold;
       color: #ffa500;
-      padding: 15px 20px;
+      padding: 10px 20px;
     }
 
     .button-delete {
@@ -130,7 +130,7 @@
       font-size: 15px;
       font-weight: bold;
       color: #40e0d0;
-      padding: 15px 20px;
+      padding: 10px 20px;
     }
 
   </style>
@@ -165,7 +165,6 @@
             <td>
               {{ $todo->created_at}}
             </td>
-              <div class="date-2">2023-03-03 01:08:52</div>
               <form action="/todo/update" method="post">
                 @csrf
                 <td>

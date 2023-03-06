@@ -30,3 +30,5 @@ return '$todos';
 use App\Http\Controllers\TodoController;
 
 Route::get('/', [TodoController::class, 'index']);
+
+Route::post('/todo/create', [TodoController::class, 'store']);
