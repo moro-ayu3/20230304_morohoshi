@@ -8,8 +8,7 @@
   <style>
     .homepage {
       width: 100%;
-      height: auto;
-      padding: 200px 150px;
+      padding: 5% 5%;
       background-color: #191970;
     }
 

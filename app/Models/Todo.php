@@ -10,4 +10,8 @@ class Todo extends Model
     use HasFactory;
 
     protected $fillable = ['id'];
+
+    use new;
+
+    protected $new_todo = ['string'];
 }

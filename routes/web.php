@@ -32,3 +32,10 @@ use App\Http\Controllers\TodoController;
 Route::get('/', [TodoController::class, 'index']);
 
 Route::post('/todo/create', [TodoController::class, 'store']);
+Route::post('/todo/create', [TodoController::class, 'save']);
+
+Route::post('/find', [TodoController::class, 'find']);
+Route::post('/find', [TodoController::class, 'serach']);
+Route::post('/todo/update', [TodoController::class, 'update']);
+Route::post('/todo/update', [TodoController::class, 'edit']);
+Route::post('/todo/update', [TodoController::class, 'save']);
