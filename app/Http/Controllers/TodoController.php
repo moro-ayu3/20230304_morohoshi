@@ -16,18 +16,23 @@
         return view('store');
     }
 
-    public function save(TodoRequest $request)
+    public function create(TodoRequest $request)
      {
+        $this->validate($request, Todo::$todo);
         $form=$request->all();
         unset($form['_token']);
         Todo::save($form);
         return redirect('/');
     }
 
-    public function update()
+    public function update(TodoRequest $request)
      {
-        return view('update');
-     }
+       $form = $request->all();
+       unset($form['_token']);
+       Todo::where('id', $request->id)->update($form);
+       Todo::save($form);
+       return redirect('/');
+    }
 
     public function find()
      {
@@ -50,12 +55,14 @@
     return view('edit', ['form' => $todo]);
     }
 
-    public function save(TodoRequest $request)
+    public function delete(Request $request)
      {
-    $form = $request->all();
-    unset($form['_token']);
-    Todo::where('id', $request->id)->update($form);
-    Todo::save($form);
+    $todo = Todo::find($request->id);
+    return view('delete', ['form' => $todo]);
+    }
+
+  public function destroy(Request $request)
+   {
+    Todo::find($request->id)->delete();
     return redirect('/');
-  }
   }
