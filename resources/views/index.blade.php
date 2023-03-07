@@ -137,6 +137,18 @@
 
 <body>
   <h1>{{$todo}}</h1>
+
+    @section('title', 'index.blade.php')
+
+       @section('content')
+        @if (count($errors) > 0)
+       <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+       </ul>
+       @endif
+
   <div class="homepage">
      <div class="inner">
       <header>
@@ -185,6 +197,7 @@
       </main>
      </div>
     </div>
+    @endsection
 </body>
 
 </html>

@@ -11,26 +11,24 @@
         return view('index',['todos'=>$todos]);
   }
 
-    public function store()
-     {
-        return view('store');
-    }
-
-    public function create(TodoRequest $request)
+    public function store(TodoRequest $request)
      {
         $this->validate($request, Todo::$todo);
-        $form=$request->all();
+        $todo = new Todo;
+        $todo->name =$request->input('new_todo');
+         $form=$request->all();
         unset($form['_token']);
-        Todo::save($form);
+        $form->save('store');
         return redirect('/');
     }
 
     public function update(TodoRequest $request)
      {
+       $this->validate($request, Todo::$todo);
        $form = $request->all();
        unset($form['_token']);
        Todo::where('id', $request->id)->update($form);
-       Todo::save($form);
+       $form->save('update');
        return redirect('/');
     }
 
@@ -66,3 +64,4 @@
     Todo::find($request->id)->delete();
     return redirect('/');
   }
+}
