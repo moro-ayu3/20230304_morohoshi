@@ -13,6 +13,7 @@
 
     public function store(TodoRequest $request)
      {
+        $this->validate($request, Todo::$todo);
         $todo = new Todo;
         $todo->name =$request->input('new_todo');
          $form=$request->all();
@@ -23,6 +24,7 @@
 
     public function update(TodoRequest $request)
      {
+       $this->validate($request, Todo::$todo);
        $form = $request->all();
        unset($form['_token']);
        Todo::where('id', $request->id)->update($form);
@@ -36,4 +38,9 @@
     return view('delete', ['form' => $todo]);
     }
 
+  public function destroy(Request $request)
+   {
+    Todo::find($request->id)->delete();
+    return redirect('/');
   }
+}

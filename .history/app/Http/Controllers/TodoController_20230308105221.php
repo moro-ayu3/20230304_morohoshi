@@ -13,6 +13,7 @@
 
     public function store(TodoRequest $request)
      {
+        $this->validate($request, Todo::$todo);
         $todo = new Todo;
         $todo->name =$request->input('new_todo');
          $form=$request->all();

@@ -136,7 +136,8 @@
 </head>
 
 <body>
-  <h1>{{$todo}}</h1>
+  <h1>{{$todo}}</h1
+
   <div class="homepage">
      <div class="inner">
       <header>
