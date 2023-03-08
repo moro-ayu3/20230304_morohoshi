@@ -13,12 +13,6 @@
       background-color: #191970;
     }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .inner {
       width: 700px;
       height: 300px;
@@ -150,7 +144,7 @@
 
 <body>
   <div class="homepage">
-     <div class="container">
+     <div class="container"></div>
       <div class="inner">
         <header>
           <h1 class="header-title">TodoList</h1>
@@ -174,30 +168,29 @@
             @foreach($todos as $todo)
             <tr>
               <td>
-                {{ $todo->created_at}}
-              </td>
-              <div class="parent">
-                <form action="/todo/update" method="post">
+              {{ $todo->created_at}}
+            </td>
+            <div class="parent">
+              <form action="/todo/update" method="post">
                 @csrf
-                  <td>
-                    <input type="text" class="input-update" value="" name="content" />
-                  </td>
-                  <td>
-                    <button class="button-update">更新</button>
-                  </td>
-                </form>
                 <td>
-                  <form action="/todo/delete" method="post">
-                   @csrf
-                    <button class="button-delete">削除</button>
-                  </form>
+                  <input type="text" class="input-update" value="" name="content" />
                 </td>
+                <td>
+                  <button class="button-update">更新</button>
+                </td>
+              </form>
+              <td>
+                <form action="/todo/delete" method="post">
+                  @csrf
+                  <button class="button-delete">削除</button>
+                </form>
+              </td>
               </div>
-            </tr>
-            @endforeach
-          </table>
-        </main>
-      </div>
+          </tr>
+          @endforeach
+        </table>
+      </main>
      </div>
     </div>
 </body>

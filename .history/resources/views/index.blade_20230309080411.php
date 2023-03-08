@@ -13,12 +13,6 @@
       background-color: #191970;
     }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .inner {
       width: 700px;
       height: 300px;
@@ -150,7 +144,7 @@
 
 <body>
   <div class="homepage">
-     <div class="container">
+     <div class="container"></div>
       <div class="inner">
         <header>
           <h1 class="header-title">TodoList</h1>
@@ -184,20 +178,19 @@
                   </td>
                   <td>
                     <button class="button-update">更新</button>
-                  </td>
-                </form>
-                <td>
-                  <form action="/todo/delete" method="post">
-                   @csrf
-                    <button class="button-delete">削除</button>
-                  </form>
                 </td>
+              </form>
+              <td>
+                <form action="/todo/delete" method="post">
+                  @csrf
+                  <button class="button-delete">削除</button>
+                </form>
+              </td>
               </div>
-            </tr>
-            @endforeach
-          </table>
-        </main>
-      </div>
+          </tr>
+          @endforeach
+        </table>
+      </main>
      </div>
     </div>
 </body>

@@ -13,18 +13,12 @@
       background-color: #191970;
     }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .inner {
       width: 700px;
       height: 300px;
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
-      margin: 0 auto;
+      
     }
 
     .header-title {
@@ -150,54 +144,53 @@
 
 <body>
   <div class="homepage">
-     <div class="container">
-      <div class="inner">
-        <header>
-          <h1 class="header-title">TodoList</h1>
-        </header>
-        <main>
-          <div class="form">
-            <form action="/todo/create" method="get">
-             @csrf
-              <input type="text" class="text">
-              <button class="create-btn">追加</button>
-            </form>
-          </div>
+     <div class="inner">
+      <header>
+        <h1 class="header-title">TodoList</h1>
+      </header>
+      <main>
+        <div class="form">
+          <form action="/todo/create" method="get">
+          @csrf
+            <input type="text" class="text">
+            <button class="create-btn">追加
+            </button>
+          </form>
+        </div>
 
-          <table>
-            <tr>
-              <th class="date-1">作成日</th>
-              <th class="name">タスク名</th>
-              <th class="update">更新</th>
-              <th class="delete">削除</th>
-            </tr>
-            @foreach($todos as $todo)
-            <tr>
-              <td>
-                {{ $todo->created_at}}
-              </td>
-              <div class="parent">
-                <form action="/todo/update" method="post">
+        <table>
+          <tr>
+            <th class="date-1">作成日</th>
+            <th class="name">タスク名</th>
+            <th class="update">更新</th>
+            <th class="delete">削除</th>
+          </tr>
+          @foreach($todos as $todo)
+          <tr>
+            <td>
+              {{ $todo->created_at}}
+            </td>
+            <div class="parent">
+              <form action="/todo/update" method="post">
                 @csrf
-                  <td>
-                    <input type="text" class="input-update" value="" name="content" />
-                  </td>
-                  <td>
-                    <button class="button-update">更新</button>
-                  </td>
-                </form>
                 <td>
-                  <form action="/todo/delete" method="post">
-                   @csrf
-                    <button class="button-delete">削除</button>
-                  </form>
+                  <input type="text" class="input-update" value="" name="content" />
                 </td>
+                <td>
+                  <button class="button-update">更新</button>
+                </td>
+              </form>
+              <td>
+                <form action="/todo/delete" method="post">
+                  @csrf
+                  <button class="button-delete">削除</button>
+                </form>
+              </td>
               </div>
-            </tr>
-            @endforeach
-          </table>
-        </main>
-      </div>
+          </tr>
+          @endforeach
+        </table>
+      </main>
      </div>
     </div>
 </body>

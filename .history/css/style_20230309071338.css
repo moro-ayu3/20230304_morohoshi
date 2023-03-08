@@ -5,18 +5,18 @@
   background-color: #191970;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .inner {
   width: 700px;
   height: 300px;
   border-radius: 10px 10px 10px 10px;
   background-color: #fff;
-  margin: 0 auto;
+  margin: -10% -10%;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-title {
@@ -52,6 +52,12 @@
   font-weight: bold;
   color: #9966CC;
   padding:10px 20px 10px 20px;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 table {

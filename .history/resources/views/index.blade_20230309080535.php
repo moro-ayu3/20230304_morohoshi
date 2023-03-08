@@ -13,12 +13,6 @@
       background-color: #191970;
     }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .inner {
       width: 700px;
       height: 300px;
@@ -150,7 +144,7 @@
 
 <body>
   <div class="homepage">
-     <div class="container">
+     <div class="container"></div>
       <div class="inner">
         <header>
           <h1 class="header-title">TodoList</h1>
@@ -193,12 +187,11 @@
                   </form>
                 </td>
               </div>
-            </tr>
-            @endforeach
-          </table>
-        </main>
+          </tr>
+          @endforeach
+        </table>
+      </main>
       </div>
-     </div>
     </div>
 </body>
 

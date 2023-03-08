@@ -13,12 +13,7 @@
       background-color: #191970;
     }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
+    
     .inner {
       width: 700px;
       height: 300px;
