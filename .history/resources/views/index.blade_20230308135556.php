@@ -169,7 +169,6 @@
             <td>
               {{ $todo->created_at}}
             </td>
-            <div class="parent">
               <form action="/todo/update" method="post">
                 @csrf
                 <td>
@@ -185,7 +184,6 @@
                   <button class="button-delete">削除</button>
                 </form>
               </td>
-              </div>
           </tr>
           @endforeach
         </table>

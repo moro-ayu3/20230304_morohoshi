@@ -10,6 +10,7 @@
   <body>
     <div class="homepage">
      <div class="inner">
+      <div class="parent">
         <header>
           <h1 class="header-title">TodoList</h1>
         </header>
@@ -35,26 +36,26 @@
                 {{ $todo->created_at}}
               </td>
               <div class="parent">
-                <form action="/todo/update" method="post">
+              <form action="/todo/update" method="post">
+               @csrf
+              <td>
+                <input type="text" class="input-update" value="" name="content">
+              </td>
+              <td>
+                <button class="button-update">更新</button>
+              </td>
+              </form>
+              <td>
+                <form action="/todo/delete" method="post">
                  @csrf
-                  <td>
-                    <input type="text" class="input-update" value="" name="content">
-                  </td>
-                  <td>
-                    <button class="button-update">更新</button>
-                  </td>
+                  <button class="button-delete">削除</button>
                 </form>
-                <td>
-                  <form action="/todo/delete" method="post">
-                   @csrf
-                   <button class="button-delete">削除</button>
-                  </form>
-                </td>
-              </div>
+              </td>
             </tr>
             @endforeach
           </table>
         </main>
+      </div>
      </div>
     </div>
   </body>

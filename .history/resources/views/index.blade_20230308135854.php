@@ -169,7 +169,7 @@
             <td>
               {{ $todo->created_at}}
             </td>
-            <div class="parent">
+            < class="parent">
               <form action="/todo/update" method="post">
                 @csrf
                 <td>

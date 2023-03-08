@@ -91,11 +91,6 @@ table {
   color: black;
 }
 
-.parent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .date-2 {
   margin-left: 20px;
