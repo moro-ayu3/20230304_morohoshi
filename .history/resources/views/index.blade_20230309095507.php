@@ -8,7 +8,7 @@
   <style>
     .homepage {
       width: 100%;
-      height: 100vw;
+      height: 100%;
       padding: 5% 5%;
       background-color: #191970;
     }
@@ -21,7 +21,7 @@
 
     .inner {
       width: 700px;
-      height: auto;
+      height: auto
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
       margin: 0 auto;
