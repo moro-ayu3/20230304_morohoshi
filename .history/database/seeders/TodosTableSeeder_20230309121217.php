@@ -14,9 +14,11 @@ class TodosTableSeeder extends Seeder
      */
     public function run()
     {
-      $param = [
-        'content' => 'テスト',
+      $todo = [
+      'id' => '20',
+      'string' => '191',
+      'timestamp' => 'created_at',
+      'timestamp' => '',
     ];
-     Todo::create($param);
   }
 }
