@@ -177,7 +177,7 @@
                 {{ $todo->created_at}}
               </td>
               <div class="parent">
-                <form action="/todo/update" method="post" value="{{$form->created_at}}">
+                <form action="/todo/update" method="post" value="{{$form->timestamp}}">
                 @csrf
                   <td>
                     <input type="text" class="input-update" value="" name="content" />
@@ -187,7 +187,7 @@
                   </td>
                 </form>
                 <td>
-                  <form action="/todo/delete" method="post" value="{{$form->updated_at}}">
+                  <form action="/todo/delete" method="post" va>
                    @csrf
                     <button class="button-delete">削除</button>
                   </form>

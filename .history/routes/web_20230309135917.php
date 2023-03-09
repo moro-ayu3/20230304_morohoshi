@@ -9,4 +9,4 @@ Route::post('/todo/create', [TodoController::class, 'store']);
 
 Route::post('/todo/update', [TodoController::class, 'update']);
 
-Route::post('/todo/delete', [TodoController::class, 'delete']);
+Route::get('/todo/delete', [TodoController::class, 'delete']);

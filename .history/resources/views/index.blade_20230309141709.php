@@ -177,7 +177,7 @@
                 {{ $todo->created_at}}
               </td>
               <div class="parent">
-                <form action="/todo/update" method="post" value="{{$form->created_at}}">
+                <form action="/todo/update" method="post" value="{{$form->create}}">
                 @csrf
                   <td>
                     <input type="text" class="input-update" value="" name="content" />
