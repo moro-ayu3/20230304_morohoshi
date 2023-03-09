@@ -181,13 +181,16 @@
                 @csrf
                   <td>
                     <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
+
+
+既読" name="content" />
                   </td>
                   <td>
                     <button class="button-update">更新</button>
                   </td>
                 </form>
                 <td>
-                  <form action="/todo/delete" method="post">
+                  <form action="/todo/delete" method="post" value="{{$todo->updated_at}}">
                    @csrf
                     <button class="button-delete">削除</button>
                   </form>

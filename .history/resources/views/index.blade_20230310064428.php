@@ -187,7 +187,7 @@
                   </td>
                 </form>
                 <td>
-                  <form action="/todo/delete" method="post">
+                  <form action="/todo/delete" method="post" value="{{$todo->upd>
                    @csrf
                     <button class="button-delete">削除</button>
                   </form>
