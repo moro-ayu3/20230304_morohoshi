@@ -13,7 +13,7 @@ class TodoRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return
     }
 
     /**
