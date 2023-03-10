@@ -29,7 +29,9 @@ class TodoRequest extends FormRequest
     {
         return [
           'id' => 'required',
-          'content' => 'required',
+          'string' => 'required',
+          'timestamp' => 'required',
+          'timestamp' => 'integer',
         ];
     }
 }

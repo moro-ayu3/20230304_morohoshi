@@ -179,7 +179,6 @@
               <div class="parent">
                 <form action="/todo/update" method="post" >
                 @csrf
-                 <input type="hidden" value="20" name="20">
                   <td>
                     <input type="text" class="input-update" type="hidden" value="{{$todo->content}}"  name="20" name="content" />
                   </td>

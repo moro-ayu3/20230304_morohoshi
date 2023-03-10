@@ -30,6 +30,8 @@ class TodoRequest extends FormRequest
         return [
           'id' => 'required',
           'content' => 'required',
+          'created_at' => 'required',
+          'updated_at' => 'integer',
         ];
     }
 }

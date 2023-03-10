@@ -13,11 +13,7 @@ class TodoRequest extends FormRequest
      */
     public function authorize()
     {
-        if ($this->path() == '/') {
-      return true;
-    } else {
-      return false;
-    }
+        return true;
     }
 
     /**
@@ -29,7 +25,9 @@ class TodoRequest extends FormRequest
     {
         return [
           'id' => 'required',
-          'content' => 'required',
+          'string' => 'required',
+          'timestamp' => 'required',
+          'timestamp' => 'integer',
         ];
     }
 }

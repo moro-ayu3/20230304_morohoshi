@@ -28,8 +28,10 @@ class TodoRequest extends FormRequest
     public function rules()
     {
         return [
-          'id' => 'required',
+          '' => 'required',
           'content' => 'required',
+          'created_at' => 'required',
+          'updated_at' => 'integer',
         ];
     }
 }
