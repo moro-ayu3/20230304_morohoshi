@@ -17,7 +17,7 @@
         $todo->name =$request->input('new_todo');
          $form=$request->all();
         unset($form['_token']);
-        $form->save();
+        $form->save('store');
         return redirect('/');
     }
 

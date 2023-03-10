@@ -181,7 +181,7 @@
                 @csrf
                  <input type="hidden" value="{{$todo->id}}" name="id">
                   <td>
-                    <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
+                    <input type="text" class="input-update" type="hidden" value="{{$todo->content}}" name="content" />
                   </td>
                   <td>
                     <button class="button-update">更新</button>
