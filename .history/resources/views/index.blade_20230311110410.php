@@ -157,9 +157,9 @@
         </header>
         <main>
           <div class="form">
-            <form action="/todo/create" method="post">
+            <form action="/todo/create" method="post" >
              @csrf
-              <input type="text" class="text" name="content">
+              <input type="text" class="text">
               <button class="create-btn">追加</button>
             </form>
           </div>
