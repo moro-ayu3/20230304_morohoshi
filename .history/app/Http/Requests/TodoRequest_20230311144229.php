@@ -29,7 +29,7 @@ class TodoRequest extends FormRequest
         ];
     }
 
-    public function form(TodoRequests $request)
+    public function form(Requests $request)
     {
         $request->validate([
             'content' => 'min:20',

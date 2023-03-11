@@ -173,7 +173,7 @@
               @endif
             <form action="/todo/create" method="post">
              @csrf
-              <input type="text" class="text" name="content">
+              <input type="text" class="text" name="">
               @if ($errors->has('created_btn'))
               <tr>
                 <th>ERROR</th>

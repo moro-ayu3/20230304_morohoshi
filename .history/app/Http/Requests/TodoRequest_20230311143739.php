@@ -4,7 +4,6 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-
 class TodoRequest extends FormRequest
 {
     /**
@@ -29,10 +28,8 @@ class TodoRequest extends FormRequest
         ];
     }
 
-    public function form(TodoRequests $request)
+    public function form(Request $request)
     {
-        $request->validate([
-            'content' => 'min:20',
-        ]);
+        $request->validate
     }
 }

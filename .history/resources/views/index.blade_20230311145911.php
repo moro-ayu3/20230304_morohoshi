@@ -165,19 +165,20 @@
           @endif
           <div class="form">
             @csrf
-              @if ($errors->has('container'))
+              @if ($errors->has('content'))
               <tr>
                 <th>ERROR</th>
-                <td>{{$errors->first('container')}}</td>
+                <td>{{$errors->first('content')}}</td>
               </tr>
               @endif
             <form action="/todo/create" method="post">
              @csrf
               <input type="text" class="text" name="content">
+              {{ Str::limit('content', 20)}}
               @if ($errors->has('created_btn'))
               <tr>
                 <th>ERROR</th>
-                <td>{{$errors->first('created_btn')}}</td>
+                <td>{{$errors->first('created_at')}}</td>
               </tr>
               @endif
               <button class="create-btn">追加</button>

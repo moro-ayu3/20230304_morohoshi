@@ -168,12 +168,13 @@
               @if ($errors->has('container'))
               <tr>
                 <th>ERROR</th>
-                <td>{{$errors->first('container')}}</td>
+                <td>{{$errors->first('c')}}</td>
               </tr>
               @endif
             <form action="/todo/create" method="post">
              @csrf
               <input type="text" class="text" name="content">
+              {{ Str::limit('content', 20)}}
               @if ($errors->has('created_btn'))
               <tr>
                 <th>ERROR</th>
