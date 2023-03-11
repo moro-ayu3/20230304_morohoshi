@@ -223,6 +223,12 @@
                    <td>{{$errors->first('updated_at')}}</td>
                   </tr>
                   @endif
+                  @if ($errors->has('deleted_at'))
+              <tr>
+                <th>ERROR</th>
+                <td>{{$errors->first('deleted_at')}}</td>
+              </tr>
+            @endif
                   <td>
                     <button class="button-update">更新</button>
                   </td>
@@ -231,8 +237,8 @@
                 <tr>
                   <th>ERROR</th>
                   <td>{{$errors->first('deleted_at')}}</td>
-                </tr>
-                @endif
+              </tr>
+            @endif
                 <td>
                   <form action="/todo/delete" method="post">
                    @csrf

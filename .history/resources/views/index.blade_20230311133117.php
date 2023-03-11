@@ -186,11 +186,20 @@
           </div>
 
           <table>
-            <tr>
+            @csrf
+            <tr>'?
+               \ '
               <th class="date-1">作成日</th>
               <th class="name">タスク名</th>
               <th class="update">更新</th>
+            @if ($errors->has('deleted_at'))
+              <tr>
+                <th>ERROR</th>
+                <td>{{$errors->first('deleted_at')}}</td>
+              </tr>
+            @endif
               <th class="delete">削除</th>
+              <td><input type="hidden" name="delete"></td>
             </tr>
             @foreach($todos as $todo)
             <tr>
@@ -223,16 +232,16 @@
                    <td>{{$errors->first('updated_at')}}</td>
                   </tr>
                   @endif
+                  @if ($errors->has('deleted_at'))
+              <tr>
+                <th>ERROR</th>
+                <td>{{$errors->first('deleted_at')}}</td>
+              </tr>
+            @endif
                   <td>
                     <button class="button-update">更新</button>
                   </td>
                 </form>
-                @if ($errors->has('deleted_at'))
-                <tr>
-                  <th>ERROR</th>
-                  <td>{{$errors->first('deleted_at')}}</td>
-                </tr>
-                @endif
                 <td>
                   <form action="/todo/delete" method="post">
                    @csrf

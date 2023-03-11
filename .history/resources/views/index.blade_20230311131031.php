@@ -152,7 +152,7 @@
   <div class="homepage">
      <div class="container">
       <div class="inner">
-        <header>3
+        <header>
           <h1 class="header-title">TodoList</h1>
         </header>
         <main>
@@ -186,11 +186,29 @@
           </div>
 
           <table>
+            @csrf
             <tr>
               <th class="date-1">作成日</th>
               <th class="name">タスク名</th>
+            @if ($errors->has('updated_at'))
+              <tr>
+                <th>ERROR</th>
+                <td>{{$errors->first('updated_at')}}</td>
+              </tr>
+            @endif
+            <tr>
               <th class="update">更新</th>
+              <td><input type="hidden" name="update"></td>
+            </tr>
+            @if ($errors->has('deleted_at'))
+              <tr>
+                <th>ERROR</th>
+                <td>{{$errors->first('deleted_at')}}</td>
+              </tr>
+            @endif
+            <tr>
               <th class="delete">削除</th>
+              <td><input type="hidden" name="delete"></td>
             </tr>
             @foreach($todos as $todo)
             <tr>
@@ -221,18 +239,12 @@
                   <tr>
                    <th>ERROR</th>
                    <td>{{$errors->first('updated_at')}}</td>
-                  </tr>
-                  @endif
+              </tr>
+            @endif
                   <td>
                     <button class="button-update">更新</button>
                   </td>
                 </form>
-                @if ($errors->has('deleted_at'))
-                <tr>
-                  <th>ERROR</th>
-                  <td>{{$errors->first('deleted_at')}}</td>
-                </tr>
-                @endif
                 <td>
                   <form action="/todo/delete" method="post">
                    @csrf

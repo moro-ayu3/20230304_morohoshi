@@ -152,7 +152,7 @@
   <div class="homepage">
      <div class="container">
       <div class="inner">
-        <header>3
+        <header>
           <h1 class="header-title">TodoList</h1>
         </header>
         <main>
@@ -164,21 +164,20 @@
            </ul>
           @endif
           <div class="form">
-            @csrf
+            <form action="/todo/create" method="post">
+             @csrf
+             <table>
               @if ($errors->has('content'))
               <tr>
                 <th>ERROR</th>
                 <td>{{$errors->first('content')}}</td>
               </tr>
               @endif
-            <form action="/todo/create" method="post">
-             @csrf
               <input type="text" class="text" name="content">
-              {{ Str::limit('content', 20)}}
-              @if ($errors->has('created_btn'))
+              @if ($errors->has('content'))
               <tr>
                 <th>ERROR</th>
-                <td>{{$errors->first('created_at')}}</td>
+                <td>{{$errors->first('content')}}</td>
               </tr>
               @endif
               <button class="create-btn">追加</button>
@@ -186,53 +185,55 @@
           </div>
 
           <table>
+            @csrf
+            @if ($errors->has('date-1'))
+              <tr>
+                <th>ERROR</th>
+                <td>{{$errors->first('date-1')}}</td>
+              </tr>
+            @endif
             <tr>
               <th class="date-1">作成日</th>
+              <td><input type="hidden" name="date-1"></td>
+            </tr>
+            @if ($errors->has('name'))
+              <tr>
+                <th>ERROR</th>
+                <td>{{$errors->first('name')}}</td>
+              </tr>
+            @endif
+            <tr>
               <th class="name">タスク名</th>
+              <td><input type="hidden" name="name"></td>
+            </tr>
+            @if ($errors->has('updated_at'))
+              <tr>
+                <th>ERROR</th>
+                <td>{{$errors->first('updated_at')}}</td>
+              </tr>
+            @endif
+            <tr></tr>
               <th class="update">更新</th>
+              <td><input type="hidden" </td>
+              <
               <th class="delete">削除</th>
             </tr>
             @foreach($todos as $todo)
             <tr>
-              @if ($errors->has('created_at'))
-              <tr>
-                <th>ERROR</th>
-                <td>{{$errors->first('created_at')}}</td>
-              </tr>
-               @endif
               <td>
                 {{ $todo->created_at}}
               </td>
               <div class="parent">
-                @if ($errors->has('content'))
-                <tr>
-                   <th>ERROR</th>
-                   <td>{{$errors->first('content')}}</td>
-                </tr>
-                @endif
                 <form action="/todo/update" method="post" >
                 @csrf
                  <input type="hidden" value="{{$todo->id}}" name="id">
                   <td>
                     <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
-                  {{ Str::limit('content', 20)}}
-                  @if ($errors->has('updated_at'))
-                  <tr>
-                   <th>ERROR</th>
-                   <td>{{$errors->first('updated_at')}}</td>
-                  </tr>
-                  @endif
                   <td>
                     <button class="button-update">更新</button>
                   </td>
                 </form>
-                @if ($errors->has('deleted_at'))
-                <tr>
-                  <th>ERROR</th>
-                  <td>{{$errors->first('deleted_at')}}</td>
-                </tr>
-                @endif
                 <td>
                   <form action="/todo/delete" method="post">
                    @csrf
