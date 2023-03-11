@@ -185,16 +185,32 @@
                 {{ $todo->created_at}}
               </td>
               <div class="parent">
+                @if ($errors->has('content'))
+                <>
+                   <>ERRO
                 <form action="/todo/update" method="post" >
                 @csrf
                  <input type="hidden" value="{{$todo->id}}" name="id">
                   <td>
                     <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
+                  {{ Str::limit('content', 20)}}
+                  @if ($errors->has('updated_at'))
+                  <tr>
+                   <th>ERROR</th>
+                   <td>{{$errors->first('updated_at')}}</td>
+                  </tr>
+                  @endif
                   <td>
                     <button class="button-update">更新</button>
                   </td>
                 </form>
+                @if ($errors->has('deleted_at'))
+                <tr>
+                  <th>ERROR</th>
+                  <td>{{$errors->first('deleted_at')}}</td>
+                </tr>
+                @endif
                 <td>
                   <form action="/todo/delete" method="post">
                    @csrf

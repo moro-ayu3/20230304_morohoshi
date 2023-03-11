@@ -25,8 +25,14 @@ class TodoRequest extends FormRequest
     public function rules()
     {
         return [
-          'content' => 'required|min:20',
+          'content' => 'required\',
         ];
     }
 
+    public function form(TodoRequests $request)
+    {
+        $request->validate([
+            'content' => 'min:20',
+        ]);
+    }
 }
