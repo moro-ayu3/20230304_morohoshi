@@ -31,7 +31,8 @@
 
     public function delete(Request $request)
      {
-       Todo::find($request->id)->delete();
+       $form = $request->all();
+       Todo::where('id', $request->id)->delete($form);
        return redirect('/');
     }
 
