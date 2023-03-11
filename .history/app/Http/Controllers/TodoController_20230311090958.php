@@ -33,7 +33,8 @@
     public function delete(Request $request)
      {
        $todo = Todo::find($request->id);
-       $form = $request->all();
+       return view('delete', ['form' => $todo]);
+       Author::find($request->id)->delete();
        return redirect('/');
     }
 

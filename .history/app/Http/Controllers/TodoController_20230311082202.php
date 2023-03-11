@@ -15,8 +15,10 @@
      {
         $todo = new Todo;
         $todo->name =$request->input('new_todo');
-        $form=$request->all();
-        Todo::create($form);
+
+        Au;$form=$request->all();
+thor::create($form);$form=$request->all();
+
         unset($form['_token']);
         $form->save();
         return redirect('/');
@@ -32,9 +34,8 @@
 
     public function delete(Request $request)
      {
-       $todo = Todo::find($request->id);
-       $form = $request->all();
-       return redirect('/');
+    $todo = Todo::find($request->id);
+    return view('delete', ['form' => $todo]);
     }
 
   }

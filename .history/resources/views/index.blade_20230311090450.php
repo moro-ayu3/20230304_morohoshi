@@ -190,7 +190,7 @@
                 <td>
                   <form action="/todo/delete" method="post">
                    @csrf
-                    <input type="hidden" value="{{$todo->updated_at}}" name="timestamp">
+                    <input type="hidden" value="{{$todo->updated_at}}" name="">
                       <button class="button-delete">削除</button>
                   </form>
                 </td>
