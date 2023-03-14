@@ -222,7 +222,7 @@
       <div class="inner">
         <header>
          <div class="header">
-          <h1 class="header-title">TodoList</h1>
+          <h1 class="header-title">タスク検索</h1>
           <p class="login">「テストユーザー」でログイン中</p>
           <button class="logout-btn">ログアウト</button>
          </div>
@@ -235,18 +235,15 @@
            @endforeach
            </ul>
           @endif
-          <button class="search-btn">タスク検索</button>
           <div class="form">
             @csrf
             <form action="/todo/create" method="post">
              @csrf
               <input type="text" class="text" name="content">
               <select name="tag">
-               @foreach
-                <option value="家事" value="{{ $todo->isSelectedTag($tag->id) }}" class="select-list">家事</option>
-               @endforeach
+                <option value="{{ $todo->isSelectedTag($tag->id) }}" class="select-list"></option>
               </select>
-              <button class="create-btn">追加</button>
+              <button class="create-btn">検索</button>
             </form>
           </div>
 
@@ -258,7 +255,7 @@
               <th class="update">更新</th>
               <th class="delete">削除</th>
             </tr>
-            @foreach($todo as $todos)
+            @foreach($todos as $todo)
             <tr>
               <td>
                 {{ $todo->created_at}}
@@ -272,9 +269,7 @@
                   </td>
                   <td>
                     <select name="tag">
-                     @foreach
                       <option value="運動" value="{{ $todo->isSelectedTag($tag->id) }}" class="select-list_1">運動</option>
-                     @endforeach
                     </select>
                   </td>
                   <td>
@@ -292,6 +287,7 @@
             </tr>
             @endforeach
           </table>
+         <
         </main>
       </div>
      </div>
@@ -299,4 +295,5 @@
 </body>
 
 </html>
+
 

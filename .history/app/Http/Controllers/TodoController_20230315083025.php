@@ -7,14 +7,14 @@
   use App\Http\Controllers\Auth;
 
   class TodoController extends Controller
-{
+  {
     public function index()
      {
         $todo= Todo::all();
         return view('index',['todo'=>$todo]);
         $tags= Tag::all();
         $user= Auth::login;
-    }
+  }
 
     public function store(TodoRequest $request)
      {
@@ -51,10 +51,7 @@
        $user= Auth::login;
        $tags= Tag::all();
        $keyword= $request->keyword();
-       $tag_id= $request->tag_id();
-       if(!empty($keyword)) {
-        $todo->where
-       ;}
+       $tag_id= $request->tag_id();aa
        return view('search',[$todo, $user, $tags]);
     }
-}
+  }

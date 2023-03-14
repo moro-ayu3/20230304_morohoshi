@@ -21,5 +21,7 @@ class Todo extends Model
 
     public function isSelectedTag(){
       $tag_id=$todo->id ? "TRUE" : "FALSE";
+      "TRUE"= selected;
+      
     }
 }

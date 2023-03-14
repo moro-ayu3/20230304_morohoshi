@@ -6,15 +6,16 @@
   use App\Models\Tag;
   use App\Http\Controllers\Auth;
 
-  class TodoController extends Controller
-{
+  class TodoController extends Controller {
+    
+  }
     public function index()
      {
         $todo= Todo::all();
         return view('index',['todo'=>$todo]);
         $tags= Tag::all();
         $user= Auth::login;
-    }
+  }
 
     public function store(TodoRequest $request)
      {
@@ -54,7 +55,7 @@
        $tag_id= $request->tag_id();
        if(!empty($keyword)) {
         $todo->where
-       ;}
+       ;
        return view('search',[$todo, $user, $tags]);
     }
-}
+  }
