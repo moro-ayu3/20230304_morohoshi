@@ -258,7 +258,7 @@
               <th class="update">更新</th>
               <th class="delete">削除</th>
             </tr>
-            @foreach($todo)
+            @foreach() $todo)
             <tr>
               <td>
                 {{ $todo->created_at}}

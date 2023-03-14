@@ -258,7 +258,7 @@
               <th class="update">更新</th>
               <th class="delete">削除</th>
             </tr>
-            @foreach($todo)
+            @foreach($todos as $todo)
             <tr>
               <td>
                 {{ $todo->created_at}}
@@ -273,8 +273,8 @@
                   <td>
                     <select name="tag">
                      @foreach
-                      <option value="運動" value="{{ $todo->isSelectedTag($tag->id) }}" class="select-list_1">運動</option>
-                     @endforeach
+                      <option value="運動" class="select-list_1">運動</option>
+                     @end
                     </select>
                   </td>
                   <td>
