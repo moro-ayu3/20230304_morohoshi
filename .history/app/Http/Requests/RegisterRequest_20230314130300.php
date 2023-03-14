@@ -13,7 +13,7 @@ class RegisterRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -28,3 +28,4 @@ class RegisterRequest extends FormRequest
         ];
     }
 }
+aa

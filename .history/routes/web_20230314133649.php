@@ -20,5 +20,4 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
 Route::post('/todo/create', [TodoController::class, 'store']);
 Route::post('/todo/update', [TodoController::class, 'update']);
 Route::post('/todo/delete', [TodoController::class, 'delete']);
-Route::get('/todo/find', [TodoController::class, 'find']);
-Route::get('/todo/search', [TodoController::class, 'search']);
+Route::get('/todo/')

@@ -48,10 +48,6 @@
 
     public function search(Request $request)
      {
-       $user= Auth::login;
-       $tags= Tag::all();
-       $keyword= $request->keyword();
-       $tag_id= $request->tag_id();
-       return view('search',[$todo, $user, $tags]);
+       
     }
   }

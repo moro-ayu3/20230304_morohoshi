@@ -7,11 +7,11 @@
   use App\Http\Controllers\Auth;
 
   class TodoController extends Controller
-  {
+  {}
     public function index()
      {
-        $todo= Todo::all();
-        return view('index',['todo'=>$todo]);
+        $todos= Todo::all();
+        return view('index',['todos'=>$todos]);
         $tags= Tag::all();
         $user= Auth::login;
   }
@@ -38,20 +38,25 @@
        return redirect('/');
     }
 
+    public function relate(Request $request)
+     {
+       $hastags = Tag::has('tag')->get();
+       $notags = Tag::doesntHave('tag')->get();
+       $param = ['hastags' => $hastags, 'notags' => $notags];
+       return view('tag.index',$param);
+    }
+
+    public function relate(Request $request)
+     {
+       $hasusers = User::has('user')->get();
+       $nousers = User::doesntHave('user')->get();
+       $param = ['hasusers' => $hasusers, 'nousers' => $nousers];
+       return view('user.index',$param);
+    }
+
     public function find(TodoRequest $request)
      {
        $user= Auth::login;
-       $tags= Tag::all();
-       $todo=[];
-       return view('search',[$todo, $user, $tags]);
-    }
 
-    public function search(Request $request)
-     {
-       $user= Auth::login;
-       $tags= Tag::all();
-       $keyword= $request->keyword();
-       $tag_id= $request->tag_id();
-       return view('search',[$todo, $user, $tags]);
-    }
+   
   }
