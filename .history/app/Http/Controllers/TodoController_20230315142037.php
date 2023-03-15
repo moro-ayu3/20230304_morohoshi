@@ -12,7 +12,7 @@
      {
         $todo= Todo::all();
         $tags= Tag::all();
-        return view('index',['todo'=>$todo, 'tags'=>$tags]);
+        return view('index', 'search', ['todo'=>$todo, 'tags'=>$tags]);a
         $user= Auth::login;
     }
 
