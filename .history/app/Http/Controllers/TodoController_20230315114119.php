@@ -13,7 +13,6 @@
         $todo= Todo::all();
         return view('index', 'search', ['todo'=>$todo]);
         $tags= Tag::all();
-        return view('index', 'search', $tags);
         $user= Auth::login;
     }
 

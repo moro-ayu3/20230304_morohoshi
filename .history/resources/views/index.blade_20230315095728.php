@@ -243,7 +243,7 @@
               <input type="text" class="text" name="content">
               <select name="tag">
                @foreach($tag as $tags)
-                {{ $tag->created_at}}
+               
                 <option value="家事" value="{{ $todo->isSelectedTag($tag->id) }}" class="select-list">家事</option>
                @endforeach
               </select>
