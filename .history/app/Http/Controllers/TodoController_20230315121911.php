@@ -11,8 +11,8 @@
     public function index()
      {
         $todo= Todo::all();
+        return view('index', 'search', ['todo'=>$todo] $tags);
         $tags= Tag::all();
-        return view('index', 'search', ['todo'=>$todo, 'tags'=>$tags]);
         $user= Auth::login;
     }
 

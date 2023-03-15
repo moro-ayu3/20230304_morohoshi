@@ -273,7 +273,7 @@
                   </td>
                   <td>
                     <select name="tag">
-                     @foreach($tags as $tag)
+                     @foreach($tags as $tags)
                      {{ $tag->created_at}}
                       <option value="運動" value="{{ $todo->isSelectedTag($tag->id) }}" class="select-list_1">運動</option>
                      @endforeach
