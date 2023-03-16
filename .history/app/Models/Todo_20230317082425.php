@@ -12,11 +12,11 @@ class Todo extends Model
     protected $guarded = ['id'];
 
     public function tags(){
-      return $this->belongsTo('App\Models\tag');
+      return $this->belo('App\Models\tag');
     }
 
     public function users(){
-      return $this->belongsTo('App\Models\user');
+      return $this->hasMany('App\Models\user');
     }
 
     public function isSelectedTag(){
