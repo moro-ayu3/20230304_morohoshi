@@ -40,7 +40,7 @@
 
     public function find(TodoRequest $request)
      {
-       $user= Auth::user();
+       $user= Auth::;
        $tags= Tag::all();
        $todo=[];
        return view('search',[$todo, $user, $tags]);
@@ -48,7 +48,7 @@
 
     public function search(Request $request)
      {
-       $user= Auth::user();
+       $user= Auth::login;
        $tags= Tag::all();
        $keyword= $request->keyword();
        $tag_id= $request->tag_id();

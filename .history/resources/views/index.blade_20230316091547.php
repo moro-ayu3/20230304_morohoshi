@@ -31,7 +31,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 30px 20px 20px 20px;
+      margin: 30px 20px 30px 20px;
     }
 
     .header-title {
@@ -58,6 +58,18 @@
       font-weight: bold;
       color: #FF0000;
       padding:10px 20px 10px 20px;
+    }
+
+    .search-btn {
+      width: 100px;
+      height: 40px;
+      border-radius: 10px 10px 10px 10px;
+      border: solid 3px #ffff00;
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffff00;
+      padding:10px 20px 10px 20px;
+      margin-left: 20px;
     }
 
     .form {
@@ -106,6 +118,7 @@
       justify-content: center;
       align-items: center;
       margin-top: 30px;
+      margin-bottom: 40px;
     }
 
     .date-1 {
@@ -200,18 +213,6 @@
       padding: 10px 20px;
     }
 
-    .return {
-      width: 80px;
-      height: 40px;
-      border-radius: 10px 10px 10px 10px;
-      border: solid 3px #808080;
-      margin: 20px 20px;
-      font-size: 15px;
-      font-weight: bold;
-      color: #808080;
-      padding: 10px 20px;
-    }
-
   </style>
 </head>
 
@@ -221,7 +222,7 @@
       <div class="inner">
         <header>
          <div class="header">
-          <h1 class="header-title">タスク検索</h1>
+          <h1 class="header-title">TodoList</h1>
           <p class="login">「テストユーザー」でログイン中</p>
           <button class="logout-btn">ログアウト</button>
          </div>
@@ -234,18 +235,19 @@
            @endforeach
            </ul>
           @endif
+          <button class="search-btn">タスク検索</button>
           <div class="form">
             @csrf
             <form action="/todo/create" method="post">
              @csrf
               <input type="text" class="text" name="content">
-              @foreach($tags as $tag)
-                {{ $tag->created_at}}
               <select name="tag">
-                <option value="{{ $tag->id }}" class="select-list"></option>
+               @foreach($tags as $tag)
+                {{ $tag->created_at}}
+                <option value="{{ $todo->isSelectedTag($tag->id) }}" class="select-list">家事</option>
+               @endforeach
               </select>
-              @endforeach
-              <button class="create-btn">検索</button>
+              <button class="create-btn">追加</button>
             </form>
           </div>
 
@@ -257,7 +259,7 @@
               <th class="update">更新</th>
               <th class="delete">削除</th>
             </tr>
-            @foreach($todos as $todo)
+            @foreach($todo as $todos)
             <tr>
               <td>
                 {{ $todo->created_at}}
@@ -270,12 +272,12 @@
                     <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
                   <td>
-                    @foreach($tags as $tag)
-                     {{ $tag->created_at}}
                     <select name="tag">
-                      <option value="{{ $tag->id }}" class="select-list_1">{{ $tag->name }}運動</option>
+                     @foreach($tags as $tag)
+                     {{ $tag->created_at}}
+                      <option value="{{ $tag->id }}" class="select-list_1">{{ $tag->name }}</option>運動</option>
+                     @endforeach
                     </select>
-                    @endforeach
                   </td>
                   <td>
                     <button class="button-update">更新</button>
@@ -292,7 +294,6 @@
             </tr>
             @endforeach
           </table>
-         <button class="return">戻る</button>
         </main>
       </div>
      </div>
@@ -300,5 +301,4 @@
 </body>
 
 </html>
-
 

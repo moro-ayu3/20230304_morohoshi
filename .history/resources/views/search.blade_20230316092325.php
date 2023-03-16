@@ -242,7 +242,7 @@
               @foreach($tags as $tag)
                 {{ $tag->created_at}}
               <select name="tag">
-                <option value="{{ $tag->id }}" class="select-list"></option>
+                <option value="" class="select-list"></option>
               </select>
               @endforeach
               <button class="create-btn">検索</button>

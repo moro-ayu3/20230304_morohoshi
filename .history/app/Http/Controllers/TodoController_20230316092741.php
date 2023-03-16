@@ -10,10 +10,9 @@
 {
     public function index()
      {
-        $user = Auth::user();
-        $tags = Tag::all();
-        $todo =$user->todo;
-        return view('index',['todo'=>$todo, 'user' => $user, 'tags'=>$tags]);
+        $user= Auth::user();
+        $tags= Tag::all();
+        return view('index',['todo'=>$todo, 'tags'=>$tags]);
     }
 
     public function store(TodoRequest $request)
@@ -40,7 +39,7 @@
 
     public function find(TodoRequest $request)
      {
-       $user= Auth::user();
+       $user= Auth::login;
        $tags= Tag::all();
        $todo=[];
        return view('search',[$todo, $user, $tags]);
@@ -48,7 +47,7 @@
 
     public function search(Request $request)
      {
-       $user= Auth::user();
+       $user= Auth::login;
        $tags= Tag::all();
        $keyword= $request->keyword();
        $tag_id= $request->tag_id();
