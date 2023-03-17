@@ -14,13 +14,7 @@ use App\Http\Controllers\TodoController;
 |
 */
 
-Route::get('/', function () {
-  return view('welcome');
-});
 
-Route::get('/dashboard', function () {
-  return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
 Route::group(['middleware' => ['auth']],function () {
   Route::get('/', [TodoController::class, 'index'])->name('todo.index');
