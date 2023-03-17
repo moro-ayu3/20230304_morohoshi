@@ -67,5 +67,18 @@
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot}}
         </div>
+             <form action="/auth" method="post">
+                <>
+                @csrf
+                  <tr>
+                    <th>Email</th>
+                    <td class="td_1"><input type="email" name="email"></td>
+                  </tr>
+                  <tr>
+                    <th>Password</th>
+                    <td class="td_1"><input type="password" name="password"></td>
+                  </tr>
+                  <>
+                    <td class="td_2"><input type="text" name=""></td
     </body>
 </html>

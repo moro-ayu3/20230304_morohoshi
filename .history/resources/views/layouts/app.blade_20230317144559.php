@@ -19,6 +19,7 @@
             <div class="card">
               @yield('content')
             </div>
+            <
         </div>
     </body>
 </html>

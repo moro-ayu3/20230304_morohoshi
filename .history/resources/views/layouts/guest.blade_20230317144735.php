@@ -65,7 +65,25 @@
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
-            {{ $slot}}
-        </div>
+                {{ $slot}}
+             </div>
+             <form action="/auth" method="post">
+                <table>
+                @csrf
+                  <tr>
+                    <th>Email</th>
+                    <td class="td_1"><input type="email" name="email"></td>
+                  </tr>
+                  <tr>
+                    <th>Password</th>
+                    <td class="td_1"><input type="password" name="password"></td>
+                  </tr>
+                  <tr>
+                    <td class="td_2"><input type="text" name=""></td><th><p class="remember-me">Remember me</p></th>
+                  </tr>
+                </table>
+                <button type="submit" class="login-btn">LOG IN</button>
+             </form>
+            @endsection
     </body>
 </html>

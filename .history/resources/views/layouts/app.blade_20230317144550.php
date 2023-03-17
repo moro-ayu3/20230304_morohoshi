@@ -19,6 +19,8 @@
             <div class="card">
               @yield('content')
             </div>
+            <main>
+            @section('con
         </div>
     </body>
 </html>

@@ -19,6 +19,20 @@
             <div class="card">
               @yield('content')
             </div>
+            <main>
+            @section('content')
+            <p>{{ $text }}</p>
+            <form action="/auth" method="post">
+              <>
+              @csrf
+                <tr>
+                  <th>Name</th>
+                  <td><input type="text" name="name"></td>
+                </tr>
+                <>
+                  <th>Email</th>
+                  <td><input type="email" name="email"></td>
+        
         </div>
     </body>
 </html>
