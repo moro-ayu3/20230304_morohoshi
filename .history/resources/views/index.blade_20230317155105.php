@@ -226,7 +226,7 @@ aa<!DOCTYPE html>
           <h1 class="header-title">TodoList</h1>
           @section('content')
           @if (Auth::check())
-            <p class="login">「テストユーザー」でログイン中: {{$user->email . $user->password }}(<a href="/login"></a><a href="/register"></a>) </p>
+            <p class="login">「テストユーザー」でログイン中: {{$user->email . $user->password . $user->Confirm password}}(<a href="/login"></a><a href="/register"></a>) </p>
           @else
             <button class="logout-btn">ログアウト (<a href="/logout"></a>) </button>
           @endif

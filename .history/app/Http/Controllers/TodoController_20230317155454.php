@@ -55,6 +55,6 @@
        if(!empty($keyword)) {
         $todos->where
        ;}
-       return view('search',[$todos, $user, $tags]);
+       return view('search',[$todo, $user, $tags]);
     }
 }

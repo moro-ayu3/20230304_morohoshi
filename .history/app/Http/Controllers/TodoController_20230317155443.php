@@ -43,7 +43,7 @@
        $user= Auth::user();
        $tags= Tag::all();
        $todos=[];
-       return view('search',[$todos, $user, $tags]);
+       return view('search',[$todo, $user, $tags]);
     }
 
     public function search(Request $request)
@@ -53,8 +53,8 @@
        $keyword= $request->keyword();
        $tag_id= $request->tag_id();
        if(!empty($keyword)) {
-        $todos->where
+        $todo->where
        ;}
-       return view('search',[$todos, $user, $tags]);
+       return view('search',[$todo, $user, $tags]);
     }
 }
