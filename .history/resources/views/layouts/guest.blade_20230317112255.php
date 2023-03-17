@@ -63,10 +63,14 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body>
+    <body class="font-sans antialiased">
+        <div class="min-h-screen bg-gray-100">
+
+
+            <!-- Page Content -->
+            <main>
             @section('content')
              <div class="font-sans text-gray-900 antialiased">
-                {{ $slot}}
              </div>
              <form action="/auth" method="post">
                 <table>
@@ -86,5 +90,6 @@
                 <button type="submit" class="login-btn">LOG IN</button>
              </form>
             @endsection
+            </main>
     </body>
 </html>

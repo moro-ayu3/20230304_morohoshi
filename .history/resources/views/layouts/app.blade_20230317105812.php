@@ -12,17 +12,9 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/common.css') }}">
-        @yield('css')
+        @yield
         <style>
-       .card {
-         width: 200px;
-         height: 100px;
-         border-radius: 5px 5px 5px 5px;
-         box-shadow: 3px 3px 1px #c0c0c0;
-         margin: 0 auto;
-       }
-
-       th {
+        th {
          font-size: 15px;
          color: #808080;
          margin-top: 15px;
@@ -67,11 +59,16 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
-        <div class="container bg-gray-100">
+        <div class="min-h-screen bg-gray-100">
+            @include('layouts.navigation')
+
             <!-- Page Heading -->
-            <div class="card bg-white shadow">
-              @yield('content')
-            </div>
+            <header class="bg-white shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
+
             <!-- Page Content -->
             <main>
             @section('content')

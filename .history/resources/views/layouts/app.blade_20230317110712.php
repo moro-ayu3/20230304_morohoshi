@@ -14,15 +14,7 @@
         <link rel="stylesheet" href="{{ asset('css/common.css') }}">
         @yield('css')
         <style>
-       .card {
-         width: 200px;
-         height: 100px;
-         border-radius: 5px 5px 5px 5px;
-         box-shadow: 3px 3px 1px #c0c0c0;
-         margin: 0 auto;
-       }
-
-       th {
+        th {
          font-size: 15px;
          color: #808080;
          margin-top: 15px;
@@ -69,9 +61,12 @@
     <body class="font-sans antialiased">
         <div class="container bg-gray-100">
             <!-- Page Heading -->
-            <div class="card bg-white shadow">
-              @yield('content')
+            <div class="bg-white shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
             </div>
+
             <!-- Page Content -->
             <main>
             @section('content')

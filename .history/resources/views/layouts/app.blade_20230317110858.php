@@ -14,15 +14,7 @@
         <link rel="stylesheet" href="{{ asset('css/common.css') }}">
         @yield('css')
         <style>
-       .card {
-         width: 200px;
-         height: 100px;
-         border-radius: 5px 5px 5px 5px;
-         box-shadow: 3px 3px 1px #c0c0c0;
-         margin: 0 auto;
-       }
-
-       th {
+        th {
          font-size: 15px;
          color: #808080;
          margin-top: 15px;
@@ -72,6 +64,7 @@
             <div class="card bg-white shadow">
               @yield('content')
             </div>
+
             <!-- Page Content -->
             <main>
             @section('content')

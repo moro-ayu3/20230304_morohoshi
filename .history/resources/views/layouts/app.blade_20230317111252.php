@@ -14,14 +14,7 @@
         <link rel="stylesheet" href="{{ asset('css/common.css') }}">
         @yield('css')
         <style>
-       .card {
-         width: 200px;
-         height: 100px;
-         border-radius: 5px 5px 5px 5px;
-         box-shadow: 3px 3px 1px #c0c0c0;
-         margin: 0 auto;
-       }
-
+       .card 
        th {
          font-size: 15px;
          color: #808080;
