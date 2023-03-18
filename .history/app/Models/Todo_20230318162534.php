@@ -18,4 +18,7 @@ class Todo extends Model
     public function users(){
       return $this->belongsTo('App\Models\user');
     }
+
+    public function isSelectedTag(){
+    
 }
