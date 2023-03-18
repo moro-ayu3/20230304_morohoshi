@@ -232,7 +232,6 @@ aa<!DOCTYPE html>
           @endif
          </div>
         </header>
-        @section('content')
         <table>
             @foreach ($todos as $todo)
              <tr>

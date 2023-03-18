@@ -12,7 +12,7 @@
      {
         $user = Auth::user();
         $todos =Todo::all();
-        $todos =$user->todos;
+        $todos =$user->todofa-spin;
         $tags = Tag::all();
         return view('index',['todos'=>$todos, 'user' => $user, 'tags'=>$tags]);
     }

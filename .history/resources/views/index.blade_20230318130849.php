@@ -222,9 +222,9 @@ aa<!DOCTYPE html>
       <div class="inner">
         <header>
          <div class="header">
-        @section('title', 'index.blade.php')
+          @section('title', 'index.blade.php')
           <h1 class="header-title">TodoList</h1>
-        @section('content')
+          @section('content')
           @if (Auth::check())
             <p class="login">「テストユーザー」でログイン中: {{$user->email . $user->password }}(<a href="/login"></a><a href="/register"></a>) </p>
           @else
@@ -232,8 +232,7 @@ aa<!DOCTYPE html>
           @endif
          </div>
         </header>
-        @section('content')
-        <table>
+          <table>
             @foreach ($todos as $todo)
              <tr>
               <td>
@@ -251,8 +250,8 @@ aa<!DOCTYPE html>
               </td>
              </tr>
             @endforeach
-        </table>
-        @endsection
+          </table>
+          @endsection
         <main>
           @if (count($errors) > 0)
            <ul>
@@ -285,7 +284,7 @@ aa<!DOCTYPE html>
               <th class="update">更新</th>
               <th class="delete">削除</th>
             </tr>
-            @foreach($todos as $todo)
+            @foreach($todo as $todos)
             <tr>
               <td>
                 {{ $todo->created_at}}

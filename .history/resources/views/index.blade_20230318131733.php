@@ -227,12 +227,11 @@ aa<!DOCTYPE html>
         @section('content')
           @if (Auth::check())
             <p class="login">「テストユーザー」でログイン中: {{$user->email . $user->password }}(<a href="/login"></a><a href="/register"></a>) </p>
-          @else
+        @else
             <button class="logout-btn">ログアウト (<a href="/logout"></a>) </button>
-          @endif
+        @endif
          </div>
         </header>
-        @section('content')
         <table>
             @foreach ($todos as $todo)
              <tr>

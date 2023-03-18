@@ -229,10 +229,9 @@ aa<!DOCTYPE html>
             <p class="login">「テストユーザー」でログイン中: {{$user->email . $user->password }}(<a href="/login"></a><a href="/register"></a>) </p>
           @else
             <button class="logout-btn">ログアウト (<a href="/logout"></a>) </button>
-          @endif
+        @endif
          </div>
         </header>
-        @section('content')
         <table>
             @foreach ($todos as $todo)
              <tr>
