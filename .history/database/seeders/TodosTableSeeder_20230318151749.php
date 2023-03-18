@@ -16,8 +16,8 @@ class TodosTableSeeder extends Seeder
     {
       $param = [
         'content' => 'テスト',
-        'tag_id' => '1',
-        'user_id' => '1',
+        'tag_id' => ,
+        'user_id'
     ];
      Todo::create($param);
   }

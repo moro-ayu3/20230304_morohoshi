@@ -164,6 +164,7 @@ aa<!DOCTYPE html>
       margin-left: 40px;
       margin-right: 40px;
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       font-weight: bold;
       color: black;
@@ -245,6 +246,9 @@ aa<!DOCTYPE html>
         <table>
             @foreach ($todos as $todo)
              <tr>
+              <td>
+                {{$todos->getDetail()}}
+              </td>
               <td>
                 @if ($todos->tag != null)
                 {{ $todos->tag->getTitle() }}

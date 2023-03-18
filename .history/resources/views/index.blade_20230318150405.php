@@ -72,6 +72,7 @@ aa<!DOCTYPE html>
       border: solid 3px #ffff00;
       font-size: 15px;
       font-weight: bold;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       color: #ffff00;
       padding:10px 20px 10px 20px;
@@ -130,6 +131,7 @@ aa<!DOCTYPE html>
     .date-1 {
       margin-left: 100px;
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       font-weight: bold;
       color: black;
@@ -138,6 +140,7 @@ aa<!DOCTYPE html>
     .name {
       margin-left: 150px;
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       font-weight: bold;
       color: black;
@@ -146,6 +149,7 @@ aa<!DOCTYPE html>
     .tag {
       margin-left: 80px;
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       font-weight: bold;
       color: black;
@@ -164,6 +168,7 @@ aa<!DOCTYPE html>
       margin-left: 40px;
       margin-right: 40px;
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       font-weight: bold;
       color: black;
@@ -245,6 +250,9 @@ aa<!DOCTYPE html>
         <table>
             @foreach ($todos as $todo)
              <tr>
+              <td>
+                {{$todos->getDetail()}}
+              </td>
               <td>
                 @if ($todos->tag != null)
                 {{ $todos->tag->getTitle() }}

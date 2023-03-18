@@ -7,7 +7,7 @@ aa<!DOCTYPE html>
   <title>実践アプリ開発応用</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gorditas&family=Noto+Serif+JP&display=swap" rel="stylesheet">
   <style>
     .homepage {
       width: 100%;
@@ -40,12 +40,14 @@ aa<!DOCTYPE html>
     .header-title {
       font-size: 30px;
       font-weight: bold;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       color: black;
     }
 
     .login {
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       color: black;
       text-align: right;
@@ -72,6 +74,7 @@ aa<!DOCTYPE html>
       border: solid 3px #ffff00;
       font-size: 15px;
       font-weight: bold;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       color: #ffff00;
       padding:10px 20px 10px 20px;
@@ -130,6 +133,7 @@ aa<!DOCTYPE html>
     .date-1 {
       margin-left: 100px;
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       font-weight: bold;
       color: black;
@@ -138,6 +142,7 @@ aa<!DOCTYPE html>
     .name {
       margin-left: 150px;
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       font-weight: bold;
       color: black;
@@ -146,6 +151,7 @@ aa<!DOCTYPE html>
     .tag {
       margin-left: 80px;
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       font-weight: bold;
       color: black;
@@ -164,6 +170,7 @@ aa<!DOCTYPE html>
       margin-left: 40px;
       margin-right: 40px;
       font-size: 20px;
+      font-family: 'Gorditas', cursive;
       font-family: 'Noto Serif JP', serif;
       font-weight: bold;
       color: black;
@@ -234,7 +241,9 @@ aa<!DOCTYPE html>
       <div class="inner">
         <header>
          <div class="header">
+        @section('title', 'index.blade.php')
           <h1 class="header-title">TodoList</h1>
+        @section('content')
           @if (Auth::check())
             <p class="login">「テストユーザー」でログイン中: {{$user->email . $user->password }}(<a href="/login"></a><a href="/register"></a>) </p>
           @else
@@ -242,9 +251,13 @@ aa<!DOCTYPE html>
           @endif
          </div>
         </header>
+        @section('content')
         <table>
             @foreach ($todos as $todo)
              <tr>
+              <td>
+                {{$todos->getDetail()}}
+              </td>
               <td>
                 @if ($todos->tag != null)
                 {{ $todos->tag->getTitle() }}
@@ -258,6 +271,7 @@ aa<!DOCTYPE html>
              </tr>
             @endforeach
         </table>
+        @endsection
         <main>
           @if (count($errors) > 0)
            <ul>
@@ -325,6 +339,7 @@ aa<!DOCTYPE html>
             </tr>
             @endforeach
           </table>
+          @endsection
         </main>
       </div>
      </div>

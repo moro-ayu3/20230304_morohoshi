@@ -246,6 +246,9 @@ aa<!DOCTYPE html>
             @foreach ($todos as $todo)
              <tr>
               <td>
+                {{$todos->getDetail()}}
+              </td>
+              <td>
                 @if ($todos->tag != null)
                 {{ $todos->tag->getTitle() }}
                 @endif
