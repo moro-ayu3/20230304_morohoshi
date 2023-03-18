@@ -17,7 +17,7 @@ class CreateTodosTable extends Migration
             $table->id();
             $table->string('content');
             $table->integer('tag_id')->save();
-            $table->integer('user_id');
+            $table->foreign('user_id');
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

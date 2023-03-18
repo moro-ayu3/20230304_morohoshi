@@ -16,10 +16,10 @@ class Todo extends Model
     }
 
     public function users(){
-      return $this->belongsTo('App\Models\user');
+      return $this->belongsTo('App\Models\user');aa
     }
 
     public function isSelectedTag(){
-      $tag_id=$todos->id ? "TRUE" : "FALSE";
+      $tag_id=$todo->id ? "TRUE" : "FALSE";
     }
 }

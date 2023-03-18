@@ -20,6 +20,6 @@ class Todo extends Model
     }
 
     public function isSelectedTag(){
-      $tag_id=$todos->id ? "TRUE" : "FALSE";
+      $tag_id=$todo->id ? "TRUE" : "FALSE";
     }
 }
