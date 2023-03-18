@@ -240,14 +240,10 @@ aa<!DOCTYPE html>
               </td>
               <td>
                 @if ($todos->tag != null)
-                {{ $todos->tag->getTitle() }}
+                {{ $author->book->getTitle() }}
                 @endif
               </td>
-              <td>
-                @if ($todos->user != null)
-                {{ $todos->user->getTitle() }}
-                @endif
-              </td>
+
              </tr>
             @endforeach
           </table>

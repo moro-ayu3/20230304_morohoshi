@@ -237,17 +237,7 @@ aa<!DOCTYPE html>
              <tr>
               <td>
                 {{$todos->getDetail()}}
-              </td>
-              <td>
-                @if ($todos->tag != null)
-                {{ $todos->tag->getTitle() }}
-                @endif
-              </td>
-              <td>
-                @if ($todos->user != null)
-                {{ $todos->user->getTitle() }}
-                @endif
-              </td>
+              </td>aa
              </tr>
             @endforeach
           </table>

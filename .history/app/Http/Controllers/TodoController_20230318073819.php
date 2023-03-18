@@ -11,16 +11,15 @@
     public function index()
      {
         $user = Auth::user();
-        $todos =Todo::all();
-        $todos =$user->todo;
         $tags = Tag::all();
-        return view('index',['todos'=>$todos, 'user' => $user, 'tags'=>$tags]);
+        $todo =$user->todos;
+        return view('index',['todo'=>$todos, 'user' => $user, 'tags'=>$tags]);
     }
 
     public function store(TodoRequest $request)
      {
-        $todos =$request->content();
-        $todos =$request->tag_id();
+        $todo=$request->content();
+        $todos=$request->tag_id();
         Todo::create($todos);
         return redirect('/');
     }

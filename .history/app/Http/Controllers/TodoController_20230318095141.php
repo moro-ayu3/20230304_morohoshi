@@ -11,7 +11,7 @@
     public function index()
      {
         $user = Auth::user();
-        $todos =Todo::all();
+        $todos =
         $todos =$user->todo;
         $tags = Tag::all();
         return view('index',['todos'=>$todos, 'user' => $user, 'tags'=>$tags]);

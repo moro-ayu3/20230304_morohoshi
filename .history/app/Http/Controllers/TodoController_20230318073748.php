@@ -3,7 +3,7 @@
   use Illuminate\Http\Request;
   use App\Models\Todo;
   use App\Models\Tag;
-  use Illuminate\Support\Facades\Auth;
+  use Illuminate\Support\Facades\Auth;aa
   use App\Http\Requests\TodoRequest;
 
   class TodoController extends Controller
@@ -11,16 +11,15 @@
     public function index()
      {
         $user = Auth::user();
-        $todos =Todo::all();
-        $todos =$user->todo;
         $tags = Tag::all();
+        $todos =$user->todos;
         return view('index',['todos'=>$todos, 'user' => $user, 'tags'=>$tags]);
     }
 
     public function store(TodoRequest $request)
      {
-        $todos =$request->content();
-        $todos =$request->tag_id();
+        $todos=$request->content();
+        $todos=$request->tag_id();
         Todo::create($todos);
         return redirect('/');
     }

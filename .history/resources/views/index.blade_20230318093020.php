@@ -244,8 +244,8 @@ aa<!DOCTYPE html>
                 @endif
               </td>
               <td>
-                @if ($todos->user != null)
-                {{ $todos->user->getTitle() }}
+                @if ($todos->tag != null)
+                {{ $todos->tag->getTitle() }}
                 @endif
               </td>
              </tr>

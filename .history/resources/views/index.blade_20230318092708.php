@@ -239,15 +239,10 @@ aa<!DOCTYPE html>
                 {{$todos->getDetail()}}
               </td>
               <td>
-                @if ($todos->tag != null)
-                {{ $todos->tag->getTitle() }}
-                @endif
-              </td>
-              <td>
-                @if ($todos->user != null)
-                {{ $todos->user->getTitle() }}
-                @endif
-              </td>
+                @if ($author->book != null)
+                {{ $author->book->getTitle() }}
+      @endif
+    </td>
              </tr>
             @endforeach
           </table>

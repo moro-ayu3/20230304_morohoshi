@@ -10,10 +10,10 @@
 {
     public function index()
      {
-        $user = Auth::user();
-        $todos =Todo::all();
-        $todos =$user->todo;
+        $u$todos =$user->todo;ser = Auth::user();
+
         $tags = Tag::all();
+        $todos =$user->todo;
         return view('index',['todos'=>$todos, 'user' => $user, 'tags'=>$tags]);
     }
 

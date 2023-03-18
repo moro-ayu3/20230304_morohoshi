@@ -240,12 +240,7 @@ aa<!DOCTYPE html>
               </td>
               <td>
                 @if ($todos->tag != null)
-                {{ $todos->tag->getTitle() }}
-                @endif
-              </td>
-              <td>
-                @if ($todos->user != null)
-                {{ $todos->user->getTitle() }}
+                {{ $todos->->getTitle() }}
                 @endif
               </td>
              </tr>
