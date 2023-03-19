@@ -188,7 +188,7 @@ aa<!DOCTYPE html>
 
     .select-list_1 {
       width: 80px;
-      height: 30px;
+      height
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
       margin-left: 20px;
@@ -233,7 +233,7 @@ aa<!DOCTYPE html>
          <div class="header">
           <h1 class="header-title">TodoList</h1>
           @if (Auth::check())
-            <p class="login"> {{$user->email }}(<a href="/login"></a><a href="/register"></a>) </p>
+            <p class="login">「テストユーザー」でログイン中: {{$user->email }}(<a href="/login"></a><a href="/register"></a>) </p>
           @else
             <button class="logout-btn">ログアウト (<a href="/logout"></a>) </button>
           @endif

@@ -233,7 +233,7 @@ aa<!DOCTYPE html>
          <div class="header">
           <h1 class="header-title">TodoList</h1>
           @if (Auth::check())
-            <p class="login"> {{$user->email }}(<a href="/login"></a><a href="/register"></a>) </p>
+            <p class="login">: {{$user->email }}(<a href="/login"></a><a href="/register"></a>) </p>
           @else
             <button class="logout-btn">ログアウト (<a href="/logout"></a>) </button>
           @endif
