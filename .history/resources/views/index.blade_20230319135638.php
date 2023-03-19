@@ -23,7 +23,7 @@ aa<!DOCTYPE html>
     }
 
     .inner {
-      width: 800px;
+      width: 900px;
       height: auto;;
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
@@ -83,20 +83,21 @@ aa<!DOCTYPE html>
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 0 -10px;
     }
 
     .text {
       width: 500px;
-      height: 40px;
+      height: 30px;
       border: solid 1px #c0c0c0;
-      margin-left: -10px;
+      margin-left: -20px;
       margin-right: 20px;
       border-radius: 5px 5px 5px 5px;
     }
 
     .select-list {
       width: 80px;
-      height: 30px;
+      height: auto;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
       font-size: 15px;
@@ -180,7 +181,7 @@ aa<!DOCTYPE html>
 
     .input-update {
       width: 200px;
-      height: 30px;
+      height: 20px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
       margin-left: 20px;
@@ -191,7 +192,8 @@ aa<!DOCTYPE html>
       height: 40px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
-      margin-left: 20px;
+      margin-left: 15px;
+      display: flex;
       font-size: 15px;
       color: black;
     }
@@ -213,7 +215,6 @@ aa<!DOCTYPE html>
       height: 40px;
       border-radius: 10px 10px 10px 10px;
       border: solid 3px #40e0d0;
-      margin-top: 15px;
       margin-left: 20px;
       margin-right: 30px;
       font-size: 15px;
@@ -256,7 +257,7 @@ aa<!DOCTYPE html>
               <select name="tag">
                @foreach($tags as $tag)
                 {{ $tag->created_at}}
-                <option value="{{ $tag->id }}" class="select-list" width="20" height="20">{{ $tag->name }}家事</option>
+                <option value="{{ $tag->id }}" class="select-list">{{ $tag->name }}家事</option>
                @endforeach
               </select>
               <button class="create-btn">追加</button>

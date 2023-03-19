@@ -191,7 +191,8 @@ aa<!DOCTYPE html>
       height: 40px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
-      margin-left: 20px;
+      margin-left: px;
+      display: flex;
       font-size: 15px;
       color: black;
     }
@@ -213,7 +214,6 @@ aa<!DOCTYPE html>
       height: 40px;
       border-radius: 10px 10px 10px 10px;
       border: solid 3px #40e0d0;
-      margin-top: 15px;
       margin-left: 20px;
       margin-right: 30px;
       font-size: 15px;

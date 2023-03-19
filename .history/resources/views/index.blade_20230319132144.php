@@ -23,7 +23,7 @@ aa<!DOCTYPE html>
     }
 
     .inner {
-      width: 800px;
+      width: 700px;
       height: auto;;
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
@@ -34,7 +34,7 @@ aa<!DOCTYPE html>
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 10px 30px 10px 30px;
+      margin: 30px 20px 30px 20px;
     }
 
     .header-title {
@@ -50,7 +50,7 @@ aa<!DOCTYPE html>
       color: black;
       text-align: right;
       display: inline-block;
-      margin-right: 30px;
+      margin-right: 15px;
     }
 
     .logout-btn {
@@ -66,7 +66,7 @@ aa<!DOCTYPE html>
     }
 
     .search-btn {
-      width: 150px;
+      width: 100px;
       height: 40px;
       border-radius: 10px 10px 10px 10px;
       border: solid 3px #ffff00;
@@ -75,30 +75,32 @@ aa<!DOCTYPE html>
       font-family: 'Noto Serif JP', serif;
       color: #ffff00;
       padding:10px 20px 10px 20px;
-      margin-top: -10px;
-      margin-left: 30px;
+      margin-left: 20px;
     }
 
     .form {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: -20px -15px;
     }
 
     .text {
       width: 500px;
-      height: 40px;
+      height: 30px;
       border: solid 1px #c0c0c0;
-      margin-left: -10px;
+      margin-left: 20px;
       margin-right: 20px;
       border-radius: 5px 5px 5px 5px;
+      display: flex;
     }
 
     .select-list {
       width: 80px;
-      height: 30px;
+      height: 40px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
+      display: flex;
       font-size: 15px;
       color: black;
     }
@@ -110,6 +112,7 @@ aa<!DOCTYPE html>
       margin-right: 20px;
       border-radius: 10px 10px 10px 10px;
       border: solid 3px #9966CC;
+      display: flex;
       font-size: 15px;
       font-weight: bold;
       color: #9966CC;
@@ -180,7 +183,7 @@ aa<!DOCTYPE html>
 
     .input-update {
       width: 200px;
-      height: 30px;
+      height: 20px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
       margin-left: 20px;
@@ -191,7 +194,8 @@ aa<!DOCTYPE html>
       height: 40px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
-      margin-left: 20px;
+      margin-left: 15px;
+      display: flex;
       font-size: 15px;
       color: black;
     }
@@ -213,7 +217,6 @@ aa<!DOCTYPE html>
       height: 40px;
       border-radius: 10px 10px 10px 10px;
       border: solid 3px #40e0d0;
-      margin-top: 15px;
       margin-left: 20px;
       margin-right: 30px;
       font-size: 15px;
@@ -239,6 +242,8 @@ aa<!DOCTYPE html>
           @endif
          </div>
         </header>
+        <>
+            @foreach ($todos as $todo)
         <main>
           @if (count($errors) > 0)
            <ul>
@@ -256,7 +261,7 @@ aa<!DOCTYPE html>
               <select name="tag">
                @foreach($tags as $tag)
                 {{ $tag->created_at}}
-                <option value="{{ $tag->id }}" class="select-list" width="20" height="20">{{ $tag->name }}家事</option>
+                <option value="{{ $tag->id }}" class="select-list">{{ $tag->name }}家事</option>
                @endforeach
               </select>
               <button class="create-btn">追加</button>
