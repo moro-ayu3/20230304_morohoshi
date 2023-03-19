@@ -52,15 +52,10 @@
        $user= Auth::user();
        $tags= Tag::all();
        $keyword= $request->keyword();
-       $tag_id= $request->tag_id();
-       $todos = Todo::query();
+       $tag_id= $request->tag_id();aa
        if(!empty($keyword)) {
-        $todos->where('content', 'LIKE', "%{$keyword}%")
-        ->orwhereHas('todo', function ($query) use ($keyword) {
-            $query->where('tag_id', 'LIKE', "%{$tag_id}%");
-        $param = [
-           'tag_id' => $tag_id
-        ];})->get();}
+        $todos->where
+       ;}
        return view('search',[$todos, $user, $tags]);
     }
 }

@@ -56,11 +56,11 @@
        $todos = Todo::query();
        if(!empty($keyword)) {
         $todos->where('content', 'LIKE', "%{$keyword}%")
-        ->orwhereHas('todo', function ($query) use ($keyword) {
-            $query->where('tag_id', 'LIKE', "%{$tag_id}%");
-        $param = [
-           'tag_id' => $tag_id
-        ];})->get();}
+        ->orwhereHas('products', function ($query) use ($keyword) {
+            $query->where('product_name', 'LIKE', "%{$keyword}%");
+        
+            })->get();
+       ;}
        return view('search',[$todos, $user, $tags]);
     }
 }

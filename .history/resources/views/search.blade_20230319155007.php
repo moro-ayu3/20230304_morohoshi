@@ -225,12 +225,23 @@
           <h1 class="header-title">タスク検索</h1>
           @section('content')
           @if (Auth::check())
-          <p class="login">「」でログイン中: {{$user->name}}(<a href="/login"></a><a href="/register"></a>)</p>
+          <p class="login">「テストユーザー」でログイン中: {{$user->name . $user->email . $user->password . $user->Confirm password}}(<a href="/login"></a><a href="/register"></a>)</p>
           @else
             <button class="logout-btn">ログアウト (<a href="/logout"></a>) </button>
           @endif
          </div>
         </header>
+          <table>
+            @foreach ($todos as $todo)
+             <tr>
+              <td>
+                {{$todos->getDetail()}}
+              </td>
+             </tr>
+            @endforeach
+          </table>
+          {{ $todos->links() }}
+          @endsection
         <main>
           @if (count($errors) > 0)
            <ul>
@@ -250,10 +261,6 @@
                 <option value="{{ $tag->id }}" class="select-list"></option>
               </select>
               @endforeach
-            </form>
-            <form action="/todo/search" method="get">
-             @csrf
-              <input type="hidden">
               <button class="create-btn">検索</button>
             </form>
           </div>
