@@ -243,9 +243,8 @@
             @csrf
             <form action="/todo/create" method="post">
              @csrf
-              @if
-              $todos = Todo::all();
-              @else
+              @if)
+
               @endif
               <input type="text" class="text" name="content">
               @foreach($tags as $tag)

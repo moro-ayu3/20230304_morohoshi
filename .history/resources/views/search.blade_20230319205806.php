@@ -242,11 +242,7 @@
           <div class="form">
             @csrf
             <form action="/todo/create" method="post">
-             @csrf
-              @if
-              $todos = Todo::all();
-              @else
-              @endif
+             @csrfaa
               <input type="text" class="text" name="content">
               @foreach($tags as $tag)
                 {{ $tag->created_at}}

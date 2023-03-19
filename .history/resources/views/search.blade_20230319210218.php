@@ -245,7 +245,7 @@
              @csrf
               @if
               $todos = Todo::all();
-              @else
+              
               @endif
               <input type="text" class="text" name="content">
               @foreach($tags as $tag)
