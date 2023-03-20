@@ -32,7 +32,7 @@
     public function update(TodoRequest $request)
      {
        $content = $request->input('content')('user_id');
-       $tag_id = $request->input('tag_id')('user_id');
+       $tag_id = $request->input('tag_id')('user');
        $user_id = Auth::id();
        Todo::find( $request->id)->update($todos);
        return redirect('/');

@@ -31,16 +31,26 @@
 
     public function update(TodoRequest $request)
      {
-       $content = $request->input('content')('user_id');
-       $tag_id = $request->input('tag_id')('user_id');
+       $content = $request->input('content');
+       $tag_id = $request->input('tag_id');
        $user_id = Auth::id();
+       Todo::create([
+             'content' => $content,
+             'tag_id
        Todo::find( $request->id)->update($todos);
        return redirect('/');
     }
 
     public function delete(Request $request)
      {
+       $content = $request->input('content');
+       $tag_id = $request->input('tag_id');
        $user_id = Auth::id();
+       Todo::create([
+             'content' =>$content,
+             'tag_id' => $tag_id,
+             'user_id' => $user_id,
+        ]);
        Todo::find($request->id)->delete();
        return redirect('/');
     }
