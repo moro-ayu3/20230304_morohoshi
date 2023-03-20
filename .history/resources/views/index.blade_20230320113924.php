@@ -252,8 +252,9 @@
            <button class="search-btn" name="task" onclick="location.href='search.blade.php'">タスク検索</button>
           </form>
           <div class="form">
+            @csrf
             <form action="/todo/create" method="post">
-             @csrf
+             @
               <input type="text" class="text" name="content">
               <select name="tag" class="select-list" >
                @foreach($tags as $tag)

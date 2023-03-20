@@ -20,17 +20,6 @@ class Todo extends Model
     }
 
     public function doSearch(){
-      $todos = Todo::query();
-       if(!empty($keyword)) {
-        $todos->where('content', 'LIKE', "%{$keyword}%")
-        ->orwhereHas('todo', function ($query) use ($keyword) {
-            $query->where('tag_id', 'LIKE', "%{$tag_id}%");
-        $param = [
-           'tag_id' => $tag_id
-        ];})->get();}
-    }
-
-    public function isSelectedTag(){
-      $tag_id=$todos->id ? "TRUE" : "FALSE";
+      
     }
 }

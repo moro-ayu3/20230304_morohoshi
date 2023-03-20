@@ -30,7 +30,5 @@ class Todo extends Model
         ];})->get();}
     }
 
-    public function isSelectedTag(){
-      $tag_id=$todos->id ? "TRUE" : "FALSE";
-    }
+    
 }
