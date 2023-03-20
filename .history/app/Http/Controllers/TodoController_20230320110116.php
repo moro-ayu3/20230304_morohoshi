@@ -20,8 +20,8 @@
      {  
         $todos = Todo::create([
              'content' => $request->input('content'),
-             'tag_id' => $request->input('tag_id')
-        ]);
+              'tag_id' => $request->input('tag_id')
+  ]);
         return redirect('/');
     }
 

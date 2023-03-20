@@ -18,10 +18,9 @@
 
     public function store(TodoRequest $request)
      {  
-        $todos = Todo::create([
-             'content' => $request->input('content'),
-             'tag_id' => $request->input('tag_id')
-        ]);
+        $todos =$request->content();
+         =$request->tag_id();
+        Todo::create($todos);
         return redirect('/');
     }
 

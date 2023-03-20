@@ -11,6 +11,7 @@
     public function index()
      {
         $user = Auth::user();
+        $todos =$user->todos;
         $tags = Tag::all();
         $todos = $user->todos;
         return view('index',['todos'=>$todos, 'user' => $user, 'tags'=>$tags]);
@@ -18,10 +19,10 @@
 
     public function store(TodoRequest $request)
      {  
-        $todos = Todo::create([
-             'content' => $request->input('content'),
-             'tag_id' => $request->input('tag_id')
-        ]);
+        $todos = Todo::all();
+        $todos =$request->content();
+        $todos =$request->tag_id();
+        Todo::create($todos);
         return redirect('/');
     }
 

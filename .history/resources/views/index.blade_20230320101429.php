@@ -170,6 +170,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      
     }
 
     .date-2 {

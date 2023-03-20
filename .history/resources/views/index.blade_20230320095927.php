@@ -213,6 +213,7 @@
       height: 40px;
       border-radius: 10px 10px 10px 10px;
       border: solid 3px #40e0d0;
+      margin-top: 15px;
       margin-left: 20px;
       margin-right: 30px;
       font-size: 15px;
@@ -255,6 +256,7 @@
             @csrf
             <form action="/todo/create" method="post">
               <input type="text" class="text" name="content">
+              <input type="hidden" name="id" value="{{ $tag->id}}">
               <select name="tag" class="select-list" >
                @foreach($tags as $tag)
                 {{ $tag->created_at}}
@@ -300,7 +302,7 @@
                 <td>
                   <form action="/todo/delete" method="post">
                    @csrf
-                    <input type="hidden" value="{{$todo->id}}" name="id">
+                    <input type="hidden" value="{{$todos->id}}" name="id">
                       <button class="button-delete">削除</button>
                   </form>
                 </td>
