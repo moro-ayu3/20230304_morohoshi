@@ -30,9 +30,8 @@
     }
 
     public function update(TodoRequest $request)
-    {
-       $user_id = Auth::id();
-       $form = [$request->all(), 'user_id' => $user_id];
+     {
+       $form = $request->all();a
        unset($form['_token']);
        Todo::where('id', 'user_id', $request->id, $request->user_id)->update($form);
        return redirect('/');

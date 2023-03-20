@@ -17,7 +17,7 @@
     }
 
     public function store(TodoRequest $request)
-     {
+     {  
         $content = $request->input('content');
         $tag_id = $request->input('tag_id');
         $user_id = Auth::id();
@@ -30,9 +30,8 @@
     }
 
     public function update(TodoRequest $request)
-    {
-       $user_id = Auth::id();
-       $form = [$request->all(), 'user_id' => $user_id];
+     {
+       $form = $request->all();
        unset($form['_token']);
        Todo::where('id', 'user_id', $request->id, $request->user_id)->update($form);
        return redirect('/');
