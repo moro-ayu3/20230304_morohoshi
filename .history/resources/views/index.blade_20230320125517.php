@@ -246,10 +246,10 @@
            @endforeach
            </ul>
           @endif
-          <form action="{{ route('todo.find')}}" method="get">
+          <form action="{{ route('todo')" method="get">
            @csrf
            <input type="hidden">
-           <button type ="submit" class="search-btn" name="task" onclick="location.href='search.blade.php'">タスク検索</button>
+           <button class="search-btn" name="task" onclick="location.href='search.blade.php'">タスク検索</button>
           </form>
           <div class="form">
             <form action="/todo/create" method="post">

@@ -249,7 +249,7 @@
           <form action="{{ route('todo.find')}}" method="get">
            @csrf
            <input type="hidden">
-           <button type ="submit" class="search-btn" name="task" onclick="location.href='search.blade.php'">タスク検索</button>
+           <button type ="submitclass="search-btn" name="task" onclick="location.href='search.blade.php'">タスク検索</button>
           </form>
           <div class="form">
             <form action="/todo/create" method="post">

@@ -246,10 +246,10 @@
            @endforeach
            </ul>
           @endif
-          <form action="{{ route('todo.find')}}" method="get">
+          <form action="/todo/find" method="get">
            @csrf
            <input type="hidden">
-           <button type ="submit" class="search-btn" name="task" onclick="location.href='search.blade.php'">タスク検索</button>
+           <button class="search-btn" name="task" onclick="location.href='search.blade.php'">タスク検索</button>
           </form>
           <div class="form">
             <form action="/todo/create" method="post">
@@ -286,7 +286,7 @@
                     <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
                   <td>
-                    <select name="tag_id" class="select-list_1" >
+                    <select name="tag" class="select-list_1" >
                      @foreach($tags as $tag)
                      {{ $tag->created_at}}
                       <option value="{{ $tag->id }}">{{ $tag->name }}</option>

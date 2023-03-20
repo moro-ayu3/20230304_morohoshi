@@ -45,11 +45,9 @@
 
     public function delete(Request $request)
      {
-       $content = $request->input('content');
-       $tag_id = $request->input('tag_id');
        $user_id = Auth::id();
        Todo::create([
-             'content' =>$content,
+             'content' =>$content
              'tag_id' => $tag_id,
              'user_id' => $user_id,
         ]);
