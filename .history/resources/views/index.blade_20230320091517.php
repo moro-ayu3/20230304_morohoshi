@@ -256,8 +256,7 @@
             @csrf
             <form action="/todo/create" method="post">
              @csrf
-              <input type="text" class="text" name="content">
-              <input type="hidden" name="id" value="{{ $tags->id}}">
+              <input type="text" class="text" name="content" value={{ $tag->id }} >
               <select name="tag" class="select-list" >
                @foreach($tags as $tag)
                 {{ $tag->created_at}}
@@ -284,9 +283,9 @@
               <div class="parent">
                 <form action="/todo/update" method="post" >
                 @csrf
-                 <input type="hidden" value="{{$todos->id}}{{ $tags->id }}" name="id">
+                 <input type="hidden" value="{{$todo->id}}" name="id">
                   <td>
-                    <input type="text" class="input-update" value="{{$todos->content}}" name="content" />
+                    <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
                   <td>
                     <select name="tag" class="select-list_1" >
@@ -303,7 +302,7 @@
                 <td>
                   <form action="/todo/delete" method="post">
                    @csrf
-                    <input type="hidden" value="{{$todos->id}}" name="id">
+                    <input type="hidden" value="{{$todo->id}}" name="id">
                       <button class="button-delete">削除</button>
                   </form>
                 </td>
