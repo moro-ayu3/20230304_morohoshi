@@ -246,6 +246,7 @@
           bool(false)
           @endif
           <div class="form">
+            @csrf
             <form action="/todo/create" method="post">
              @csrf
               <input type="text" class="text" name="content">

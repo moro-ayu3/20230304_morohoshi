@@ -51,7 +51,7 @@
        $user= Auth::user();
        $tags= Tag::all();
        $todos=[];
-       unset($todos['_token']);
+       unset($todos['_'])
        return view('search',[$todos, $user, $tags]);
     }
 

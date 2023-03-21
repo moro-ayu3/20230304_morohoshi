@@ -239,15 +239,15 @@
            @endforeach
            </ul>
           @endif
-          var_dump(isset($form));
-          @if
-          bool(true)
-          @else
-          bool(false)
-          @endif
           <div class="form">
+            @csrf
             <form action="/todo/create" method="post">
              @csrf
+              var_dump(isset($todos));
+              @if
+              $
+              @else
+              @endif
               <input type="text" class="text" name="content">
               @foreach($tags as $tag)
                 {{ $tag->created_at}}
