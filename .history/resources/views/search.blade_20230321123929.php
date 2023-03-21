@@ -216,7 +216,7 @@
 </head>
 
 <body>
-  @if(isset($todos))
+    
   <div class="homepage">
      <div class="container">
       <div class="inner">
@@ -237,6 +237,8 @@
            <li>{{$error}}</li>
            @endforeach
            </ul>
+          @endif
+          @if(isset($todos))
           @endif
           <div class="form">
             <form action="/todo/create" method="post">
@@ -304,7 +306,6 @@
       </div>
      </div>
     </div>
-  @endif
 </body>
 
 </html>

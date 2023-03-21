@@ -216,7 +216,7 @@
 </head>
 
 <body>
-  @if(isset($todos))
+ @if(isset($todos))
   <div class="homepage">
      <div class="container">
       <div class="inner">
@@ -304,7 +304,6 @@
       </div>
      </div>
     </div>
-  @endif
 </body>
 
 </html>

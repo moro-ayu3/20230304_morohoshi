@@ -216,13 +216,14 @@
 </head>
 
 <body>
-  @if(isset($todos))
   <div class="homepage">
      <div class="container">
       <div class="inner">
         <header>
          <div class="header">
+          @section('title', 'search.blade.php')
           <h1 class="header-title">タスク検索</h1>
+          @section('content')
           @if (Auth::check())
           <p class="login">「」でログイン中: {{$user->name}}(<a href="/login"></a><a href="/register"></a>)</p>
           @else
@@ -237,6 +238,12 @@
            <li>{{$error}}</li>
            @endforeach
            </ul>
+          @endif
+          var_dump(isset($todos));
+          @if(isset($todos) > )
+          bool(true)
+          @else
+          bool(false)
           @endif
           <div class="form">
             <form action="/todo/create" method="post">
@@ -304,7 +311,6 @@
       </div>
      </div>
     </div>
-  @endif
 </body>
 
 </html>
