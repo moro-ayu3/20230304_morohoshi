@@ -23,7 +23,7 @@
     }
 
     .inner {
-      width: 1000px;
+      width: 800px;
       height: 400px;
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
@@ -92,7 +92,7 @@
     .create-btn {
       width: 80px;
       height: 40px;
-      margin-top: -100px;
+      margin-top: -
       margin-left: 20px;
       margin-right: 20px;
       border-radius: 10px 10px 10px 10px;
@@ -108,7 +108,6 @@
       justify-content: center;
       align-items: center;
       margin-top: 30px;
-      margin-bottom: 40px;
     }
 
     .date-1 {
@@ -167,7 +166,7 @@
 
     .input-update {
       width: 200px;
-      height: 30px;
+      height: 20px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
       margin-left: 20px;

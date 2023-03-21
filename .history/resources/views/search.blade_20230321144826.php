@@ -23,7 +23,7 @@
     }
 
     .inner {
-      width: 1000px;
+      width: 800px;
       height: 400px;
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
@@ -167,7 +167,7 @@
 
     .input-update {
       width: 200px;
-      height: 30px;
+      height: 20px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
       margin-left: 20px;

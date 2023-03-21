@@ -23,8 +23,8 @@
     }
 
     .inner {
-      width: 1000px;
-      height: 400px;
+      width: 800px;
+      height: auto;
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
       margin: 0 auto;
@@ -34,7 +34,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 10px 30px 10px 30px;
+      margin: 10px 20px 20px 20px;
     }
 
     .header-title {
@@ -69,22 +69,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: -20px -15px;
     }
 
     .text {
       width: 500px;
-      height: 40px;
+      height: 30px;
       border: solid 1px #c0c0c0;
-      margin-left: 30px;
+      margin-left: 20px;
       margin-right: 20px;
       border-radius: 5px 5px 5px 5px;
+      display: flex;
     }
 
     .select-list {
       width: 80px;
-      height: 30px;
+      height: 40px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
+      display: flex;
       font-size: 15px;
       color: black;
     }
@@ -92,11 +95,11 @@
     .create-btn {
       width: 80px;
       height: 40px;
-      margin-top: -100px;
       margin-left: 20px;
       margin-right: 20px;
       border-radius: 10px 10px 10px 10px;
       border: solid 3px #9966CC;
+      display: flex;
       font-size: 15px;
       font-weight: bold;
       color: #9966CC;
@@ -108,7 +111,6 @@
       justify-content: center;
       align-items: center;
       margin-top: 30px;
-      margin-bottom: 40px;
     }
 
     .date-1 {
@@ -167,7 +169,7 @@
 
     .input-update {
       width: 200px;
-      height: 30px;
+      height: 20px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
       margin-left: 20px;

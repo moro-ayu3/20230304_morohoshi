@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>実践アプリ開発応用</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  
   <style>
     .homepage {
       width: 100%;
@@ -23,8 +21,8 @@
     }
 
     .inner {
-      width: 1000px;
-      height: 400px;
+      width: 800px;
+      height: auto;
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
       margin: 0 auto;
@@ -34,19 +32,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 10px 30px 10px 30px;
+      margin: 30px 20px 20px 20px;
     }
 
     .header-title {
       font-size: 30px;
       font-weight: bold;
-      font-family: 'Noto Serif JP', serif;
       color: black;
     }
 
     .login {
       font-size: 20px;
-      font-family: 'Noto Serif JP', serif;
       color: black;
       text-align: right;
       display: inline-block;
@@ -69,22 +65,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: -20px -15px;
     }
 
     .text {
       width: 500px;
-      height: 40px;
+      height: 30px;
       border: solid 1px #c0c0c0;
-      margin-left: 30px;
+      margin-left: 20px;
       margin-right: 20px;
       border-radius: 5px 5px 5px 5px;
+      display: flex;
     }
 
     .select-list {
       width: 80px;
-      height: 30px;
+      height: 40px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
+      display: flex;
       font-size: 15px;
       color: black;
     }
@@ -92,11 +91,11 @@
     .create-btn {
       width: 80px;
       height: 40px;
-      margin-top: -100px;
       margin-left: 20px;
       margin-right: 20px;
       border-radius: 10px 10px 10px 10px;
       border: solid 3px #9966CC;
+      display: flex;
       font-size: 15px;
       font-weight: bold;
       color: #9966CC;
@@ -108,14 +107,12 @@
       justify-content: center;
       align-items: center;
       margin-top: 30px;
-      margin-bottom: 40px;
     }
 
     .date-1 {
       margin-left: 100px;
       font-size: 20px;
       font-weight: bold;
-      font-family: 'Noto Serif JP', serif;
       color: black;
     }
 
@@ -123,7 +120,6 @@
       margin-left: 150px;
       font-size: 20px;
       font-weight: bold;
-      font-family: 'Noto Serif JP', serif;
       color: black;
     }
 
@@ -131,7 +127,6 @@
       margin-left: 80px;
       font-size: 20px;
       font-weight: bold;
-      font-family: 'Noto Serif JP', serif;
       color: black;
     }
 
@@ -139,7 +134,6 @@
       margin-left: 40px;
       font-size: 20px;
       font-weight: bold;
-      font-family: 'Noto Serif JP', serif;
       color: black;
     }
 
@@ -148,7 +142,6 @@
       margin-right: 40px;
       font-size: 20px;
       font-weight: bold;
-      font-family: 'Noto Serif JP', serif;
       color: black;
     }
 
@@ -161,13 +154,12 @@
     .date-2 {
       margin-left: 40px;
       font-size: 20px;
-      font-family: 'Noto Serif JP', serif;
       color: black;
     }
 
     .input-update {
       width: 200px;
-      height: 30px;
+      height: 20px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
       margin-left: 20px;

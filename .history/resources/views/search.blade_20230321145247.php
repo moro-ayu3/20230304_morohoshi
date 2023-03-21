@@ -23,7 +23,7 @@
     }
 
     .inner {
-      width: 1000px;
+      width: 800px;
       height: 400px;
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
