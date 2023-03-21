@@ -216,6 +216,7 @@
 </head>
 
 <body>
+  @if(isset($todos))
   <div class="homepage">
      <div class="container">
       <div class="inner">

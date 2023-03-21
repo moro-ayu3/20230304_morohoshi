@@ -216,6 +216,7 @@
 </head>
 
 <body>
+  @if(isset($todos))
   <div class="homepage">
      <div class="container">
       <div class="inner">
@@ -299,12 +300,12 @@
             </tr>
             @endforeach
           </table>
-          @endif
          <button class="return">戻る</button>
         </main>
       </div>
      </div>
     </div>
+  @endif
 </body>
 
 </html>
