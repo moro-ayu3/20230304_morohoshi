@@ -26,15 +26,14 @@
              'tag_id' => $tag_id,
              'user_id' => $user_id,
         ]);
+        unset($form['_token']);
         return redirect('/');
     }
 
     public function update(TodoRequest $request)
-     {
+    {
        $user_id = Auth::id();
-       $form = $request->all();
-       $form['user_id'] = $user_id;
-       unset($form['_token']);
+       $form = [$request->all(), 'user_id' => $user_id];
        Todo::where('id', $request->id)->update($form);
        return redirect('/');
     }

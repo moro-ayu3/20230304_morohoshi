@@ -30,7 +30,7 @@
     }
 
     public function update(TodoRequest $request)
-     {
+{
        $user_id = Auth::id();
        $form = $request->all();
        $form['user_id'] = $user_id;
