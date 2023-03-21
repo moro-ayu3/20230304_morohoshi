@@ -223,7 +223,7 @@
          <div class="header">
           <h1 class="header-title">タスク検索</h1>
           @if (Auth::check())
-          <p class="login">「」でログイン中:{{$user->name }}(<a href="/login"></a><a href="/register"></a>)</p>
+          <p class="login">「」でログイン中:(<a href="/login"></a><a href="/register"></a>)</p>
           @else
             <button class="logout-btn">ログアウト (<a href="/logout"></a>) </button>
           @endif

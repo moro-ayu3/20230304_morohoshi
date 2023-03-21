@@ -51,7 +51,7 @@
        $user= Auth::user();
        $tags= Tag::all();
        $todos = $user->todos;
-       return view('search',['todos'=>$todos, 'user'=>$user, 'tags'=>$tags]);
+       return view('search',['todos'=>$todos, 'user'$user, $tags]);
     }
 
     public function search(Request $request)
