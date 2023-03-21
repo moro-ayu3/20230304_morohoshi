@@ -54,7 +54,7 @@
        return view('search',[$todos, $user, $tags]);
     }
 
-    public function search(Request $request)
+    public function search()
      {
        $user= Auth::user();
        $tags= Tag::all();

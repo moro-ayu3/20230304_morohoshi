@@ -281,7 +281,7 @@
               <div class="parent">
                 <form action="/todo/update" method="post" >
                 @csrf
-                 <input type="hidden" value="{{$todo->id}}" name="id">
+                 <input type="hidden" value="{{$todo->id}}{{ $tag->id }}" name="id">
                   <td>
                     <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
