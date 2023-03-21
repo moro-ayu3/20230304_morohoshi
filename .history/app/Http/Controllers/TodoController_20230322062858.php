@@ -69,6 +69,6 @@
         $param = [
            'tag_id' => $tag_id
         ];})->get();}
-       return view('search',['todos'=>$todos, 'user'=>$user, 'tags'=>$tags]);
+       return view('search',['todos'=>$todos, 'user'=>$user, $tags]);
     }
 }

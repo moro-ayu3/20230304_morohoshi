@@ -309,10 +309,8 @@
             @endforeach
           </table>
           @endif
-         <form action="{{ route('todo.search')}}" method="get">
-           @csrf
-         <button type="submit" class="return" name="return" onclick="location.href=">戻る</button>
-         </form>
+         
+         <button type="submit" class="return" name="return" onclick="location.href='index.blade.php'" >戻る</button>
         </main>
       </div>
      </div>

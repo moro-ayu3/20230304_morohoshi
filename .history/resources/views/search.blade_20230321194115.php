@@ -23,8 +23,8 @@
     }
 
     .inner {
-      width: 800px;
-      height: auto;
+      width: 1000px;
+      height: 400px;
       border-radius: 10px 10px 10px 10px;
       background-color: #fff;
       margin: 0 auto;
@@ -75,7 +75,7 @@
       width: 500px;
       height: 40px;
       border: solid 1px #c0c0c0;
-      margin-left: -10px;
+      margin-left: 30px;
       margin-right: 20px;
       border-radius: 5px 5px 5px 5px;
     }
@@ -175,7 +175,7 @@
 
     .select-list_1 {
       width: 80px;
-      height: 30px;
+      height: 40px;
       border: solid 1px #c0c0c0;
       border-radius: 5px 5px 5px 5px;
       margin-left: 15px;
@@ -250,12 +250,14 @@
             <form action="/todo/create" method="post">
              @csrf
               <input type="text" class="text" name="content">
-              <select name="tag_id" class="select-list">
               @foreach($tags as $tag)
                 {{ $tag->created_at}}
-                <option value="{{ $tag->id }}"></option>
-              @endforeach
+              <select name="tag">
+              @foreach($tags as $tag)
+                {{ $tag->created_at}}
+                <option value="{{ $tag->id }}" class="select-list"></option>
               </select>
+              @endforeach
             </form>
             <form action="/todo/search" method="get">
              @csrf
@@ -286,10 +288,10 @@
                     <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
                   <td>
-                    <select name="tag_id" class="select-list_1" >
+                    <select name="tag">
                     @foreach($tags as $tag)
                       {{ $tag->created_at}}
-                      <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                      <option value="{{ $tag->id }}" class="select-list_1">{{ $tag->name }}運動</option>
                     @endforeach
                     </select>
                   </td>
@@ -309,10 +311,7 @@
             @endforeach
           </table>
           @endif
-         <form action="{{ route('todo.search')}}" method="get">
-           @csrf
-         <button type="submit" class="return" name="return" onclick="location.href=">戻る</button>
-         </form>
+         <button class="return">戻る</button>
         </main>
       </div>
      </div>

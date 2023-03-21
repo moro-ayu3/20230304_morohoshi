@@ -75,7 +75,7 @@
       width: 500px;
       height: 40px;
       border: solid 1px #c0c0c0;
-      margin-left: -10px;
+      margin-left: -60px;
       margin-right: 20px;
       border-radius: 5px 5px 5px 5px;
     }
@@ -250,10 +250,10 @@
             <form action="/todo/create" method="post">
              @csrf
               <input type="text" class="text" name="content">
-              <select name="tag_id" class="select-list">
+              <select name="tag_id">
               @foreach($tags as $tag)
                 {{ $tag->created_at}}
-                <option value="{{ $tag->id }}"></option>
+                <option value="{{ $tag->id }}" class="select-list"></option>
               @endforeach
               </select>
             </form>
@@ -286,10 +286,10 @@
                     <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
                   <td>
-                    <select name="tag_id" class="select-list_1" >
+                    <select name="tag_id"class="select-list_1" >
                     @foreach($tags as $tag)
                       {{ $tag->created_at}}
-                      <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                      <option value="{{ $tag->id }}" class="select-list_1">{{ $tag->name }}</option>
                     @endforeach
                     </select>
                   </td>
@@ -309,10 +309,7 @@
             @endforeach
           </table>
           @endif
-         <form action="{{ route('todo.search')}}" method="get">
-           @csrf
-         <button type="submit" class="return" name="return" onclick="location.href=">戻る</button>
-         </form>
+         <button class="return">戻る</button>
         </main>
       </div>
      </div>

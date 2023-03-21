@@ -311,7 +311,7 @@
           @endif
          <form action="{{ route('todo.search')}}" method="get">
            @csrf
-         <button type="submit" class="return" name="return" onclick="location.href=">戻る</button>
+         <button type="submit" class="return" name="return" onclick="location.href="">戻る</button>
          </form>
         </main>
       </div>

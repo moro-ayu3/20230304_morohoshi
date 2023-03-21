@@ -260,7 +260,7 @@
             <form action="/todo/search" method="get">
              @csrf
               <input type="hidden">
-              <button class="create-btn">検索</button>
+              <button tyclass="create-btn">検索</button>
             </form>
           </div>
 

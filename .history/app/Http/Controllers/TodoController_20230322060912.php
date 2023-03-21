@@ -58,7 +58,6 @@
      {
        $user= Auth::user();
        $tags= Tag::all();
-       $todos = $user->todos;
        $keyword= $request->input('keyword');
        $tag_id= $request->input('tag_id');
        $todos = Todo::query();
@@ -69,6 +68,6 @@
         $param = [
            'tag_id' => $tag_id
         ];})->get();}
-       return view('search',['todos'=>$todos, 'user'=>$user, 'tags'=>$tags]);
+       return view('search',[$todos, $user, $tags]);
     }
 }
