@@ -70,7 +70,7 @@
         $query->where('content', 'LIKE', "%{$keyword}%");
        }
        if(!empty($tag_id)) {
-        $query->where('id','=', "$tag_id");
+        $query->where('id','', "%{$tag_id}%");
        }
        $todos = $query->get();
        return view('search',['todos'=>$todos, 'user'=>$user, 'tags'=>$tags]);

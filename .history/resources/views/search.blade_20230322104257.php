@@ -247,7 +247,7 @@
            </ul>
           @endif
           <div class="form">
-            <form action="/todo/search" method="get">
+            <form action="/todo/search" method="post">
              @csrf
               <input type="text" class="text" name="keyword">
               <select name="tag_id" class="select-list">

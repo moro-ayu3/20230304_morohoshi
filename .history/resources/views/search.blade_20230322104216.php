@@ -247,7 +247,7 @@
            </ul>
           @endif
           <div class="form">
-            <form action="/todo/search" method="get">
+            <form action="/todo/search" method="post">
              @csrf
               <input type="text" class="text" name="keyword">
               <select name="tag_id" class="select-list">
@@ -256,6 +256,7 @@
                 <option value="{{ $tag->id }}"></option>
               @endforeach
               </select>
+              <input type="submit" value="検索">
               <button class="create-btn">検索</button>
             </form>
           </div>

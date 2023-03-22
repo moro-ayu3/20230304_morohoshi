@@ -247,15 +247,17 @@
            </ul>
           @endif
           <div class="form">
-            <form action="/todo/search" method="get">
+            <form action="/todo/search" method="post">
              @csrf
               <input type="text" class="text" name="keyword">
+              <input type="checkbox">
               <select name="tag_id" class="select-list">
               @foreach($tags as $tag)
                 {{ $tag->created_at}}
                 <option value="{{ $tag->id }}"></option>
               @endforeach
               </select>
+              <input type="submit" value="検索">
               <button class="create-btn">検索</button>
             </form>
           </div>
@@ -282,6 +284,7 @@
                     <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
                   <td>
+                    <input type="checkbox" value="{{ $tag_id }}">
                     <select name="tag_id" class="select-list_1" >
                     @foreach($tags as $tag)
                       {{ $tag->created_at}}
