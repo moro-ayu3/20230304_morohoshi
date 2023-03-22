@@ -253,7 +253,7 @@
               <select name="tag_id" class="select-list">
               @foreach($tags as $tag)
                 {{ $tag->created_at}}
-                <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                <option vaaalue="{{ $tag->id }}">{{ $tag->name }}</option>
               @endforeach
               </select>
               <button class="create-btn">検索</button>
@@ -285,7 +285,7 @@
                     <select name="tag_id" class="select-list_1" >
                     @foreach($tags as $tag)
                       {{ $tag->created_at}}
-                      <option {{ $todo->isSelectedTag($tag->id) }} value="{{ $tag->id }}">{{ $tag->name }}</option>
+                      <option value="{{ $tag->id }}">{{ $tag->name }}</option>
                     @endforeach
                     </select>
                   </td>

@@ -19,7 +19,7 @@ class Todo extends Model
       return $this->belongsTo('App\Models\user');
     }
 
-    public function isSelectedTag($tag_id){
+    public function isSelectedTag(){
       return $this->tag_id == $tag_id ? 'selected' : '';
     }
 }
