@@ -281,10 +281,10 @@
                 @csrf
                  <input type="hidden" value="{{$todo->id}}" name="id">
                   <td>
-                    <input type="text" class="input-update" value="{{$todo->content}}" value="{{ $keyword }}" name="content" />
+                    <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
                   <td>
-                    <input type="checkbox" value="{{ $tag_id }}">
+                    
                     <select name="tag_id" class="select-list_1" >
                     @foreach($tags as $tag)
                       {{ $tag->created_at}}

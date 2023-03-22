@@ -59,20 +59,13 @@
        $user= Auth::user();
        $tags= Tag::all();
        $todos = $user->todos;
-       $form = $request->all();
-       $form['keyword'] = $keyword;
-       $form['tag_id'] = $tag_id;
-       unset($form['_token']);
        $keyword = $request->input('keyword');
        $tag_id = $request->input('tag_id');
        $query = Todo::query();
        if(!empty($keyword)) {
-        $query->where('content', 'LIKE', "%{$keyword}%");
+        $query->where('content', 'LIKE', "%{$keyword}%")
        }
-       if(!empty($tag_id)) {
-        $query->where('id','LIKE', "%{$tag_id}%");
-       }
-       $todos = $query->get();
+       if(!empty($tag_id)) 
        return view('search',['todos'=>$todos, 'user'=>$user, 'tags'=>$tags]);
     }
 }

@@ -281,7 +281,7 @@
                 @csrf
                  <input type="hidden" value="{{$todo->id}}" name="id">
                   <td>
-                    <input type="text" class="input-update" value="{{$todo->content}}" value="{{ $keyword }}" name="content" />
+                    <input type="text" class="input-update" value="{{$todo->content}}" name="content" />
                   </td>
                   <td>
                     <input type="checkbox" value="{{ $tag_id }}">

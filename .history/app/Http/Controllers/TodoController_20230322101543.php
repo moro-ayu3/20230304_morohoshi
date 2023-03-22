@@ -61,7 +61,7 @@
        $todos = $user->todos;
        $form = $request->all();
        $form['keyword'] = $keyword;
-       $form['tag_id'] = $tag_id;
+       $form['tag_id'] = $tag
        unset($form['_token']);
        $keyword = $request->input('keyword');
        $tag_id = $request->input('tag_id');
