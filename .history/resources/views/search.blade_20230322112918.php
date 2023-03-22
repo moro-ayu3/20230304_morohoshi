@@ -305,7 +305,8 @@
             @endforeach
           </table>
           @endif
-         <button class="return"><a href="/">戻る</a></button>
+         <button class="return"><a 戻る</button>
+
         </main>
       </div>
      </div>

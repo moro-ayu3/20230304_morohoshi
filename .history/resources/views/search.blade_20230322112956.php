@@ -306,6 +306,7 @@
           </table>
           @endif
          <button class="return"><a href="/">戻る</a></button>
+
         </main>
       </div>
      </div>

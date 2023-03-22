@@ -61,8 +61,8 @@
        $todos = $user->todos;
        $form = $request->all();
        unset($form['_token']);
-       $keyword = $form->$request->input('keyword');
-       $tag_id = $form->$request->input('tag_id');
+       $keyword = $form $request->input('keyword');
+       $tag_id = $request->input('tag_id');
        $query = Todo::query();
        if(!empty($keyword)) {
         $query->where('content', 'LIKE', "%{$keyword}%");

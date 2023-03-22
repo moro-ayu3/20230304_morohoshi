@@ -247,7 +247,7 @@
            </ul>
           @endif
           <div class="form">
-            <form action="/todo/search" method="post">
+            <form action="/todo/search" method="get">
              @csrf
               <input type="text" class="text" name="keyword">
               <select name="tag_id" class="select-list">
@@ -305,7 +305,10 @@
             @endforeach
           </table>
           @endif
-         <button class="return"><a href="/">戻る</a></button>
+         <form action="{{ route('todo.search')}}" method="post">
+           @csrf
+         <button type="submit" class="return" name="return" onclick="location.href=">戻る</button>
+         </form>
         </main>
       </div>
      </div>

@@ -305,7 +305,10 @@
             @endforeach
           </table>
           @endif
-         <button class="return"><a href="/">戻る</a></button>
+         < action="{{ route('todo.search')}}" method="post">
+           @csrf
+         <button type="submit" class="return" name="return" onclick="location.href='index.blade.php'">戻る</button>
+         
         </main>
       </div>
      </div>
