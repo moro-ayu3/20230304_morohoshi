@@ -65,10 +65,10 @@
        $tag_id = $request->input('tag_id');
        $query = Todo::query();
        if(!empty($keyword)) {
-        $query->where('content', 'LIKE', "%{$keyword}%");
+        $query->where('', 'LIKE', "%{$keyword}%");
        }
        if(!empty($tag_id)) {
-        $query->where('tag_id','=', "$tag_id");
+        $query->where('id','=', "$tag_id");
        }
        $todos = $query->get();
        return view('search',['todos'=>$todos, 'user'=>$user, 'tags'=>$tags]);
