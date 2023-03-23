@@ -253,7 +253,6 @@
               <select name="tag_id" class="select-list">
               @foreach($tags as $tag)
                 {{ $tag->created_at}}
-                <option value=""></option>
                 <option value="{{ $tag->id }}">{{ $tag->name }}</option>
               @endforeach
               </select>
